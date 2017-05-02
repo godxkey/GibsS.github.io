@@ -108,6 +108,8 @@ Display.prototype._createSquare = function(sq) {
     ];
     this._gl.bufferData(this._gl.ARRAY_BUFFER, new Float32Array(verts), this._gl.STATIC_DRAW)
     
+    console.log(vertexBuffer)
+
     return {
         type: "square",
         buffer: vertexBuffer,
