@@ -21,3 +21,7 @@ mind game element.
 
 This is a simple web based prototype to test out the core mechanics and try to
 find a right balance for future iterations.
+
+### [Pet bot client](https://gibss.github.io/test/pet-bot-client/)
+
+A client for an online chat bot of my making. The bot is build using a trained sequence to sequence machine learning model. Have a go at it!
