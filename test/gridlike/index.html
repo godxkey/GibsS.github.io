@@ -1,0 +1,61 @@
+<html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>Grid - Testbed</title>
+
+    <script src="testbed.js" type=""></script>
+    <style>
+        body {
+            overflow: hidden;
+        }
+        h1, h2, h3 {
+            margin: 5px;
+        }
+        h1 { font-size: 1.5em; }
+        h2 { font-size: 1.17em; }
+        h3 { font-size: 0.9em; }
+        #container {
+            display: flex;
+            flex-direction: row;
+            margin: 5px;
+            height: 100%;
+            width: 100%;
+        }
+        #canvas {
+            width: 70%;
+            margin-right: 5px;
+            border: 1px solid black; 
+        }
+        #params {
+            padding: 5px;
+            width: 30%;
+            border: 1px solid black; 
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <canvas id="canvas"></canvas>
+        <div id="params">
+            <h1>GRID - Testbed</h1>
+            <button id="play-btn">Pause</button>
+            <button id="step-btn">Step</button>
+            <button id="reset-btn">Reset</button> <br>
+            <button id="reset-pause-btn">Reset + Pause</button> <br>
+
+            <input type="radio" id="show-entity-info-radio">Show entity info<br>
+            <input type="radio" id="show-body-info-radio">Show body info<br>
+            <input type="radio" id="show-contacts-radio">Show contacts<br>
+            <input type="radio" id="use-rbush">Use rbush (Spatial partionning)<br>
+            <input type="radio" id="show-broadphase-structure">Show broadphase structure<br>
+            <hr>
+            <h2>Scripts</h2>
+            <div id="scripts">
+
+            <div>
+        </div>
+    </div>
+</body>
+</html>

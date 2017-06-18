@@ -1,6 +1,12 @@
 # GibsS.github.io
 my js experiments + whatever
 
+### [Gridlike testbed](https://gibss.github.io/test/gridlike)
+
+A simple webpage that showcase my physics engine called "gridlike". Its a physics engine with a focus on being very simple to bootstrap and use to make platformers of all kind and terraria-likes.
+
+Pick the scripts and follow the instructions, you'll quickly get a sense of the scope of the library.
+
 ### [Modified bush test](https://gibss.github.io/test/rbush)
 
 A test of a modified version of the [rbush library](https://github.com/mourner/rbush). My version very simply adds element movement.
@@ -25,3 +31,4 @@ find a right balance for future iterations.
 ### [Pet bot client](https://gibss.github.io/test/pet-bot-client/)
 
 A client for an online chat bot of my making. The bot is build using a trained sequence to sequence machine learning model. Have a go at it!
+Might require cloning the repository and running it locally as their might be CORS issues.
