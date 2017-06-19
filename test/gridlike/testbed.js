@@ -4149,6 +4149,7 @@
             this.xCam = 0;
             this.yCam = 0;
             this.zoom = 40;
+            this.logs = [];
             this.canvas = document.getElementById("canvas");
             this.ctx = this.canvas.getContext('2d');
             let dpr = window.devicePixelRatio || 1, bsr = this.ctx.webkitBackingStorePixelRatio ||
@@ -4200,22 +4201,28 @@
             this._showContactRadio = document.getElementById("show-contacts-radio");
             this._useBinaryTreeRadio = document.getElementById("use-rbush");
             this._showBroadphaseStructure = document.getElementById("show-broadphase-structure");
+            this._showLogs = document.getElementById("show-logs");
             this.showEntity = this._showEntityRadio.checked || false;
             this.showBody = this._showBodyRadio.checked || false;
             this.showContact = this._showContactRadio.checked || false;
-            this.useRBush = this._useBinaryTreeRadio.checked || false;
+            this._useBinaryTreeRadio.checked = true;
+            this.useRBush = this._useBinaryTreeRadio.checked || true;
             this.showBroadphaseStructure = this._showBroadphaseStructure.checked || false;
+            this.showLogs = this._showLogs.checked || false;
             this._showEntityRadio.onclick = () => {
                 this.showEntity = !this.showEntity;
                 this._showEntityRadio.checked = this.showEntity;
+                this._draw();
             };
             this._showBodyRadio.onclick = () => {
                 this.showBody = !this.showBody;
                 this._showBodyRadio.checked = this.showBody;
+                this._draw();
             };
             this._showContactRadio.onclick = () => {
                 this.showContact = !this.showContact;
                 this._showContactRadio.checked = this.showContact;
+                this._draw();
             };
             this._useBinaryTreeRadio.onclick = () => {
                 this.useRBush = !this.useRBush;
@@ -4227,6 +4234,12 @@
             this._showBroadphaseStructure.onclick = () => {
                 this.showBroadphaseStructure = !this.showBroadphaseStructure;
                 this._showBroadphaseStructure.checked = this.showBroadphaseStructure;
+                this._draw();
+            };
+            this._showLogs.onclick = () => {
+                this.showLogs = !this.showLogs;
+                this._showLogs.checked = this.showLogs;
+                this._draw();
             };
             wheel(this.canvas, (dx, dy) => {
                 if (dy > 0) {
@@ -4348,6 +4361,9 @@
             this.script._world = this.world;
             this.script._testbed = this;
             this.lastUpdate = new Date().getTime();
+            this.xCam = 0;
+            this.yCam = 0;
+            this.zoom = 40;
             this._play = true;
             this._step = 0;
             this._frameStep = 0;
@@ -4453,7 +4469,7 @@
             }
             this.ctx.font = "9px Arial";
             if (this.zoom)
-                for (let e of this.world._vbh.queryRect(this.xCam, this.yCam, this.canvas.width * 2 / this.zoom, this.canvas.height * 2 / this.zoom)) {
+                for (let e of this.world._vbh.queryRect(this.xCam, this.yCam, this.canvas.width / this.zoom, this.canvas.height / this.zoom)) {
                     if (this.showEntity) {
                         let x = e.globalx, y = e.globaly;
                         this.ctx.beginPath();
@@ -4591,6 +4607,10 @@
             this.ctx.fillText("zoom: " + this.zoom.toFixed(1), 10, this.canvas.offsetHeight - 130);
             this.ctx.fillText("camera y: " + this.yCam.toFixed(1), 10, this.canvas.offsetHeight - 145);
             this.ctx.fillText("camera x: " + this.xCam.toFixed(1), 10, this.canvas.offsetHeight - 160);
+            if (this.showLogs)
+                for (let i = 0, len = Math.min(this.logs.length, 20); i < len; i++) {
+                    this.ctx.fillText(this.logs[i + Math.max(this.logs.length - 20, 0)], this.canvas.offsetWidth - 350, 30 + i * 20);
+                }
             this.ctx.font = "20px Arial";
             this.ctx.fillText(this.scriptDescriptor.name, 10, 30);
             this.ctx.font = "15px Arial";
@@ -4622,8 +4642,10 @@
                 }
             }
         }
-        registerEntity(entity) {
-            return entity;
+        log(log) {
+            this.logs.push(this._step + ": " + log);
+            if (this.logs.length == 100)
+                this.logs.splice(0, 70);
         }
     }
     exports.Testbed = Testbed;
@@ -4674,7 +4696,7 @@
     class Script {
         get world() { return this._world; }
         get testbed() { return this._testbed; }
-        r(entity) { return this._testbed.registerEntity(entity); }
+        log(log) { this._testbed.log(log); }
         click(x, y, body) { }
         keyDown(keys, callback) {
             this._testbed.bindKeys(keys, callback);
@@ -4703,12 +4725,12 @@
     const lib_1 = require("../../lib");
     class Script1 extends script_1.Script {
         init() {
-            let entity = this.r(this.world.createGrid({
+            let entity = this.world.createGrid({
                 x: 0,
                 y: 0,
                 width: 200,
                 height: 50
-            }));
+            });
             this.grid = entity.body;
             this.grid.setBlock(0, 0, 1, null);
             this.grid.setBlock(0, 1, 1, null);
@@ -4731,12 +4753,12 @@
     }
     class Script2 extends script_1.Script {
         init() {
-            let entity = this.r(this.world.createGrid({
+            let entity = this.world.createGrid({
                 x: 0,
                 y: 0,
                 width: 10,
                 height: 10
-            }));
+            });
             this.grid = entity.body;
             this.grid.setBlockShape(0, 0, 1);
             this.grid.setBlockShape(1, 0, 1);
@@ -4757,12 +4779,12 @@
     }
     class Script3 extends script_1.Script {
         init() {
-            let entity = this.r(this.world.createGrid({
+            let entity = this.world.createGrid({
                 x: 5,
                 y: 5,
                 width: 20,
                 height: 50
-            }));
+            });
             entity.name = "grid";
             this.grid = entity.body;
             for (let i = -300; i <= 300; i++) {
@@ -4777,7 +4799,7 @@
     }
     class Script4 extends script_1.Script {
         init() {
-            let entity = this.r(this.world.createGrid({
+            let entity = this.world.createGrid({
                 x: 0,
                 y: 0,
                 tiles: {
@@ -4785,7 +4807,7 @@
                     y: -5,
                     info: _.range(0, 10).map(i => _.range(0, 10).map(j => 1))
                 }
-            }));
+            });
             entity.name = "grid";
             this.grid = entity.body;
             this.grid.clearBlocks({ x: -2, y: -2, width: 4, height: 4 });
@@ -4794,12 +4816,12 @@
             this.grid.setBlockShape(0, 3, 4);
             this.grid.setBlockShape(0, 7, 3);
             this.grid.setBlockShape(-1, 7, 2);
-            this.rect = this.r(this.world.createRect({
+            this.rect = this.world.createRect({
                 x: 4,
                 y: 3,
                 width: 1,
                 height: 1
-            }));
+            });
         }
         update(time, delta) {
         }
@@ -4808,12 +4830,12 @@
     }
     class Script5 extends script_1.Script {
         init() {
-            let entity = this.r(this.world.createGrid({
+            let entity = this.world.createGrid({
                 x: 0,
                 y: 0,
                 width: 10,
                 height: 10
-            }));
+            });
             this.grid = entity.body;
             for (let i = 0; i < 6; i++) {
                 for (let j = 0; j < 6; j++) {
@@ -4833,12 +4855,12 @@
     }
     class Script6 extends script_1.Script {
         init() {
-            let entity = this.r(this.world.createGrid({
+            let entity = this.world.createGrid({
                 x: 0,
                 y: 0,
                 width: 10,
                 height: 10
-            }));
+            });
             this.grid = entity.body;
             for (let i = 0; i < 6; i++) {
                 for (let j = 0; j < 6; j++) {
@@ -4886,13 +4908,13 @@
                 this.phase[i] = [];
                 for (let j = 0; j < this.height; j++) {
                     this.phase[i][j] = Math.random() * 3;
-                    this.rects[i][j] = this.r(this.world.createRect({
+                    this.rects[i][j] = this.world.createRect({
                         x: i * 4,
                         y: j * 4,
                         width: 1,
                         height: 1,
                         level: i + j * this.width + 1
-                    }));
+                    });
                 }
             }
         }
@@ -4927,20 +4949,20 @@
     const cameraController_1 = require("../controllers/cameraController");
     class Script1 extends script_1.Script {
         init() {
-            this.rect = this.r(this.world.createRect({
+            this.rect = this.world.createRect({
                 x: 0,
                 y: 2,
                 width: 1,
                 height: 1,
                 level: 1
-            }));
+            });
             this.rect.name = "rect";
-            this.ground = this.r(this.world.createRect({
+            this.ground = this.world.createRect({
                 x: 0, y: 0,
                 width: 4,
                 height: 1,
                 level: 0
-            }));
+            });
             this.ground.name = "ground";
             this.ground.x = 2;
             fixSpeed.input(this, this.rect, false);
@@ -4951,19 +4973,19 @@
     }
     class Script2 extends script_1.Script {
         init() {
-            this.rect = this.r(this.world.createRect({
+            this.rect = this.world.createRect({
                 x: -1.001, y: -1,
                 width: 1,
                 height: 1,
                 level: 1
-            }));
+            });
             this.rect.name = "rect";
-            this.ground = this.r(this.world.createRect({
+            this.ground = this.world.createRect({
                 x: 0, y: 0,
                 width: 1,
                 height: 1,
                 level: 0
-            }));
+            });
             this.ground.name = "ground";
         }
         update(time, delta) {
@@ -4973,20 +4995,20 @@
     }
     class Script3 extends script_1.Script {
         init() {
-            this.rect = this.r(this.world.createRect({
+            this.rect = this.world.createRect({
                 x: 0,
                 y: 2,
                 width: 1,
                 height: 1,
                 level: 1
-            }));
+            });
             this.rect.name = "rect";
-            this.ground = this.r(this.world.createRect({
+            this.ground = this.world.createRect({
                 x: 0, y: 0,
                 width: 4,
                 height: 1,
                 level: 0
-            }));
+            });
             this.ground.name = "ground";
             fixSpeed.input(this, this.rect, true);
         }
@@ -4997,54 +5019,54 @@
     }
     class Script4 extends script_1.Script {
         init() {
-            this.rect = this.r(this.world.createRect({
+            this.rect = this.world.createRect({
                 x: 0,
                 y: 2,
                 width: 1,
                 height: 1,
                 level: 1
-            }));
+            });
             this.rect.name = "rect";
-            this.ground = this.r(this.world.createLine({
+            this.ground = this.world.createLine({
                 x: 3, y: -3,
                 size: 2,
                 isHorizontal: true,
                 level: 0
-            }));
-            this.ground = this.r(this.world.createLine({
+            });
+            this.ground = this.world.createLine({
                 x: -3, y: -3,
                 size: 2,
                 isHorizontal: false,
                 level: 0
-            }));
-            this.ground = this.r(this.world.createLine({
+            });
+            this.ground = this.world.createLine({
                 x: 3, y: 0,
                 size: 2,
                 isHorizontal: true,
                 side: "up",
                 level: 0
-            }));
-            this.ground = this.r(this.world.createLine({
+            });
+            this.ground = this.world.createLine({
                 x: -3, y: 0,
                 size: 2,
                 isHorizontal: false,
                 side: "left",
                 level: 0
-            }));
-            this.ground = this.r(this.world.createLine({
+            });
+            this.ground = this.world.createLine({
                 x: 3, y: 3,
                 size: 2,
                 isHorizontal: true,
                 side: "down",
                 level: 0
-            }));
-            this.ground = this.r(this.world.createLine({
+            });
+            this.ground = this.world.createLine({
                 x: -3, y: 3,
                 size: 2,
                 isHorizontal: false,
                 side: "right",
                 level: 0
-            }));
+            });
             this.ground.name = "ground";
             fixSpeed.input(this, this.rect, false);
         }
@@ -5060,62 +5082,62 @@
             this.world.setLayerRule("rect", "ground2", lib_1.LayerCollisionRule.UNEQUAL_GROUP);
             this.world.setLayerRule("rect", "ground3", lib_1.LayerCollisionRule.EQUAL_GROUP);
             this.world.setLayerRule("rect", "ground4", lib_1.LayerCollisionRule.NEVER);
-            this.rect = this.r(this.world.createRect({
+            this.rect = this.world.createRect({
                 x: 0, y: 2,
                 width: 1, height: 1,
                 layer: "rect",
                 layerGroup: 1,
                 level: 1
-            }));
+            });
             this.rect.name = "rect";
-            this.r(this.world.createRect({
+            this.world.createRect({
                 x: -3, y: 0,
                 width: 1, height: 1,
                 layer: "ground1", layerGroup: 1,
                 level: 0
-            })).name = "always:1";
-            this.r(this.world.createRect({
+            }).name = "always:1";
+            this.world.createRect({
                 x: 0, y: 0,
                 width: 1, height: 1,
                 layer: "ground2", layerGroup: 1,
                 level: 0
-            })).name = "unequal:1";
-            this.r(this.world.createRect({
+            }).name = "unequal:1";
+            this.world.createRect({
                 x: 3, y: 0,
                 width: 1, height: 1,
                 layer: "ground3", layerGroup: 1,
                 level: 0
-            })).name = "equal:1";
-            this.r(this.world.createRect({
+            }).name = "equal:1";
+            this.world.createRect({
                 x: 6, y: 0,
                 width: 1, height: 1,
                 layer: "ground4", layerGroup: 1,
                 level: 0
-            })).name = "never:1";
-            this.r(this.world.createRect({
+            }).name = "never:1";
+            this.world.createRect({
                 x: -3, y: -3,
                 width: 1, height: 1,
                 layer: "ground1", layerGroup: 2,
                 level: 0
-            })).name = "always:2";
-            this.r(this.world.createRect({
+            }).name = "always:2";
+            this.world.createRect({
                 x: 0, y: -3,
                 width: 1, height: 1,
                 layer: "ground2", layerGroup: 2,
                 level: 0
-            })).name = "unequal:2";
-            this.r(this.world.createRect({
+            }).name = "unequal:2";
+            this.world.createRect({
                 x: 3, y: -3,
                 width: 1, height: 1,
                 layer: "ground3", layerGroup: 2,
                 level: 0
-            })).name = "equal:2";
-            this.r(this.world.createRect({
+            }).name = "equal:2";
+            this.world.createRect({
                 x: 6, y: -3,
                 width: 1, height: 1,
                 layer: "ground4", layerGroup: 2,
                 level: 0
-            })).name = "never:2";
+            }).name = "never:2";
             fixSpeed.input(this, this.rect, false);
         }
         update(time, delta) {
@@ -5125,48 +5147,48 @@
     }
     class Script6 extends script_1.Script {
         init() {
-            this.rect = this.r(this.world.createRect({
+            this.rect = this.world.createRect({
                 x: 0,
                 y: 4,
                 width: 1,
                 height: 1,
                 level: 1
-            }));
+            });
             this.rect.name = "rect";
-            this.ground1 = this.r(this.world.createRect({
+            this.ground1 = this.world.createRect({
                 x: 0, y: 0,
                 width: 4,
                 height: 1,
                 level: 0
-            }));
+            });
             this.ground1.name = "ground1";
-            this.ground2 = this.r(this.world.createRect({
+            this.ground2 = this.world.createRect({
                 x: -2, y: 0,
                 width: 1,
                 height: 4,
                 level: 0
-            }));
+            });
             this.ground2.name = "ground2";
-            this.ground3 = this.r(this.world.createLine({
+            this.ground3 = this.world.createLine({
                 x: 2, y: 0,
                 size: 1,
                 isHorizontal: true,
                 level: 0
-            }));
+            });
             this.ground3.name = "ground3";
-            this.ground4 = this.r(this.world.createLine({
+            this.ground4 = this.world.createLine({
                 x: 0, y: 2,
                 size: 1,
                 isHorizontal: true,
                 level: 0
-            }));
+            });
             this.ground4.name = "ground4";
-            this.ground5 = this.r(this.world.createRect({
+            this.ground5 = this.world.createRect({
                 x: -6.5, y: 0,
                 width: 4,
                 height: 10,
                 level: 0
-            }));
+            });
             this.ground5.name = "ground4";
             fixSpeed.input(this, this.rect, false);
             this.rect.listener = this;
@@ -5187,20 +5209,20 @@
     }
     class Script7 extends script_1.Script {
         init() {
-            this.rect = this.r(this.world.createRect({
+            this.rect = this.world.createRect({
                 x: 0,
                 y: 2,
                 width: 1,
                 height: 1,
                 level: 1
-            }));
+            });
             this.rect.name = "rect";
-            this.ground = this.r(this.world.createRect({
+            this.ground = this.world.createRect({
                 x: -1, y: -1,
                 width: 4,
                 height: 1,
                 level: 0
-            }));
+            });
             this.ground.createRect({
                 x: -2, y: 0,
                 width: 1,
@@ -5226,13 +5248,13 @@
     }
     class Script8 extends script_1.Script {
         init() {
-            this.big = this.r(this.world.createRect({
+            this.big = this.world.createRect({
                 x: 0,
                 y: 2,
                 width: 1,
                 height: 1,
                 level: 1
-            }));
+            });
             this.big.createLine({
                 x: 0, y: 3,
                 isHorizontal: true,
@@ -5243,12 +5265,12 @@
                 width: 2,
                 height: 1
             });
-            this.ground = this.r(this.world.createRect({
+            this.ground = this.world.createRect({
                 x: -1, y: -1,
                 width: 4,
                 height: 1,
                 level: 0
-            }));
+            });
             this.ground.createRect({
                 x: -2, y: 0,
                 width: 1,
@@ -5273,19 +5295,19 @@
     }
     class Script9 extends script_1.Script {
         init() {
-            this.rect = this.r(this.world.createRect({
+            this.rect = this.world.createRect({
                 x: 0,
                 y: 2,
                 width: 1,
                 height: 1,
                 level: 1
-            }));
-            this.ground = this.r(this.world.createGrid({
+            });
+            this.ground = this.world.createGrid({
                 x: 0, y: -3,
                 level: 0,
                 width: 20,
                 height: 20
-            }));
+            });
             let grid = this.ground.body;
             grid.setBlockShape(0, 0, 1);
             grid.setBlockShape(1, 0, 1);
@@ -5302,17 +5324,17 @@
     }
     class Script10 extends script_1.Script {
         init() {
-            this.grid = this.r(this.world.createGrid({
+            this.grid = this.world.createGrid({
                 x: 0, y: 2,
                 level: 1
-            }));
+            });
             let grid = this.grid.body;
             grid.setBlockShape(0, 0, 1);
             grid.setBlockShape(2, 2, 1);
-            this.ground = this.r(this.world.createGrid({
+            this.ground = this.world.createGrid({
                 x: 0, y: -3,
                 level: 0
-            }));
+            });
             grid = this.ground.body;
             grid.setBlockShape(0, 0, 1);
             grid.setBlockShape(1, 0, 1);
@@ -5329,28 +5351,28 @@
     }
     class Script11 extends script_1.Script {
         init() {
-            this.rect = this.r(this.world.createRect({
+            this.rect = this.world.createRect({
                 x: 0, y: 0,
                 width: 1, height: 1,
                 level: 2
-            }));
-            this.movingGrid = this.r(this.world.createGrid({
+            });
+            this.movingGrid = this.world.createGrid({
                 x: -4, y: 0,
                 level: 1,
                 width: 20,
                 height: 20
-            }));
+            });
             let grid = this.movingGrid.body;
             grid.setBlockShape(0, 0, 1);
             grid.setBlockShape(0, -1, 1);
             grid.setBlockShape(0, -2, 1);
             grid.setBlockShape(1, 0, 1);
-            grid = this.r(this.world.createGrid({
+            grid = this.world.createGrid({
                 x: 0, y: -3,
                 level: 0,
                 width: 20,
                 height: 20
-            })).body;
+            }).body;
             grid.setBlockShape(0, 0, 1);
             grid.setBlockShape(0, -1, 1);
             grid.setBlockShape(0, -2, 1);
@@ -5367,39 +5389,39 @@
     }
     class Script12 extends script_1.Script {
         init() {
-            this.rect = this.r(this.world.createRect({
+            this.rect = this.world.createRect({
                 x: 0, y: 2,
                 width: 1, height: 1,
                 level: 2
-            }));
-            this.r(this.world.createRect({
+            });
+            this.world.createRect({
                 x: 0, y: 0,
                 level: 0,
                 width: 2, height: 1
-            }));
-            this.r(this.world.createRect({
+            });
+            this.world.createRect({
                 x: -2, y: 0,
                 level: 0,
                 width: 2, height: 1
-            }));
-            this.r(this.world.createRect({
+            });
+            this.world.createRect({
                 x: 2, y: 0,
                 level: 0,
                 width: 2, height: 1
-            }));
-            this.r(this.world.createLine({
+            });
+            this.world.createLine({
                 x: 4, y: 0.5,
                 level: 0,
                 size: 2,
                 isHorizontal: true
-            }));
-            this.r(this.world.createLine({
+            });
+            this.world.createLine({
                 x: -4, y: 0.5,
                 level: 0,
                 size: 2,
                 isHorizontal: true,
                 side: "up"
-            }));
+            });
             charController.input(this, this.rect);
         }
         update(time, delta) {
@@ -5409,42 +5431,42 @@
     }
     class Script13 extends script_1.Script {
         init() {
-            this.rect = this.r(this.world.createRect({
+            this.rect = this.world.createRect({
                 x: 0, y: 1,
                 width: 1, height: 1,
                 level: 2
-            }));
+            });
             this.rect.name = "rect";
-            this.r(this.world.createRect({
+            this.world.createRect({
                 x: 0, y: 0,
                 level: 0,
                 width: 2, height: 1
-            })).name = "ground1";
-            this.r(this.world.createRect({
+            }).name = "ground1";
+            this.world.createRect({
                 x: -2, y: 2,
                 level: 0,
                 isSensor: true,
                 width: 2, height: 1
-            })).name = "sensor-ground2";
-            this.r(this.world.createRect({
+            }).name = "sensor-ground2";
+            this.world.createRect({
                 x: 2, y: 3,
                 level: 0,
                 isSensor: true,
                 width: 2, height: 1
-            })).name = "sensor-ground3";
-            this.r(this.world.createLine({
+            }).name = "sensor-ground3";
+            this.world.createLine({
                 x: 4, y: 0.5,
                 level: 0,
                 size: 2,
                 isHorizontal: true
-            })).name = "ground4";
-            this.r(this.world.createLine({
+            }).name = "ground4";
+            this.world.createLine({
                 x: -4, y: 0.5,
                 level: 0,
                 size: 2,
                 isHorizontal: true,
                 side: "up"
-            })).name = "ground5";
+            }).name = "ground5";
             charController.input(this, this.rect);
             this.rect.listener = this;
         }
@@ -5467,17 +5489,17 @@
     }
     class Script14 extends script_1.Script {
         init() {
-            this.rect = this.r(this.world.createRect({
+            this.rect = this.world.createRect({
                 x: 100000000,
                 y: 100000002,
                 width: 1,
                 height: 1,
                 level: 1
-            }));
-            this.ground = this.r(this.world.createEntity({
+            });
+            this.ground = this.world.createEntity({
                 x: 100000000, y: 100000000,
                 level: 0
-            }));
+            });
             this.ground.createRect({
                 x: -0.5, y: 0,
                 width: 1, height: 2
@@ -5503,17 +5525,17 @@
     }
     class Script15 extends script_1.Script {
         init() {
-            this.rect = this.r(this.world.createRect({
+            this.rect = this.world.createRect({
                 x: 0,
                 y: 0,
                 width: 1,
                 height: 1,
                 level: 1
-            }));
-            this.ground = this.r(this.world.createEntity({
+            });
+            this.ground = this.world.createEntity({
                 x: 0, y: -10,
                 level: 0
-            }));
+            });
             for (let i = 0; i < 4000; i++) {
                 this.ground.createLine({
                     x: (Math.random() * 2 - 1) * 4000,
