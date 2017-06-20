@@ -2724,8 +2724,8 @@
                     }
                     // CALCULATE SPEED WITH PARENT
                     if (ent._parent) {
-                        ent._vx += ent._parent._simvx;
-                        ent._vy += ent._parent._simvy;
+                        ent._vx += ent._parent._topEntity._simvx;
+                        ent._vy += ent._parent._topEntity._simvy;
                     }
                     let endOfCourse = false;
                     let a = 0;
@@ -3022,8 +3022,8 @@
                     }
                     // CORRECT SPEED FOR PARENT
                     if (ent._parent) {
-                        ent._vx -= ent._parent._simvx;
-                        ent._vy -= ent._parent._simvy;
+                        ent._vx -= ent._parent._topEntity._simvx;
+                        ent._vy -= ent._parent._topEntity._simvy;
                     }
                     // RESET POTENTIAL CONTACTS
                     ent._potContacts = [];
@@ -3966,16 +3966,11 @@
     }
     exports.input = input;
     function update(entity, time, delta, speed) {
-        if (entity) {
-            if (entity.hasDownContact) {
-                if (entity.jump) {
-                    entity.vy = 8;
-                }
-                entity.setParent(entity.downContact.otherBody._topEntity, "follow");
+        if (entity.hasDownContact) {
+            if (entity.jump) {
+                entity.vy = 8;
             }
-            else {
-                entity.setParent(null);
-            }
+            entity.setParent(entity.downContact.otherBody._topEntity, "follow");
             if (entity.moveLeft && !entity.moveRight) {
                 entity.vx = -speed;
             }
@@ -3989,10 +3984,10 @@
         else {
             entity.setParent(null);
             if (entity.moveLeft && !entity.moveRight) {
-                entity.vx -= speed * delta * 2;
+                entity.vx = Math.max(-speed * 1.5, entity.vx - speed * delta * 2);
             }
             else if (entity.moveRight && !entity.moveLeft) {
-                entity.vx += speed * delta * 2;
+                entity.vx = Math.min(speed * 1.5, entity.vx + speed * delta * 2);
             }
         }
         entity.vy -= 10 * delta;
@@ -5534,7 +5529,7 @@
             for (let i = 0; i < 40; i++) {
                 this.movingPlatforms.push(this.world.createEntity({
                     x: Math.random() * 500 - 250,
-                    y: Math.random() * 10 - 5,
+                    y: Math.random() * 10 - 10,
                     level: i
                 }));
                 this.phase.push(Math.random() * 2);
