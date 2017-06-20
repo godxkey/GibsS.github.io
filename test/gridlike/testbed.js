@@ -1,15 +1,13 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
+(function (dependencies, factory) {
+    if (typeof module === 'object' && typeof module.exports === 'object') {
+        var v = factory(require, exports); if (v !== undefined) module.exports = v;
     }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "./model/world", "./model/entity", "./model/contact", "./model/body", "./model/enums", "./model/world", "./model/enums"], factory);
+    else if (typeof define === 'function' && define.amd) {
+        define(dependencies, factory);
     }
-})(function (require, exports) {
+})(["require", "exports", "./model/world", "./model/entity", "./model/contact", "./model/body", "./model/enums", "./model/world", "./model/enums"], function (require, exports) {
     "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
     var world_1 = require("./model/world");
     exports.World = world_1.World;
     exports.createWorld = world_1.createWorld;
@@ -45,17 +43,15 @@
 });
 
 },{"./model/body":2,"./model/contact":3,"./model/entity":4,"./model/enums":5,"./model/world":6}],2:[function(require,module,exports){
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
+(function (dependencies, factory) {
+    if (typeof module === 'object' && typeof module.exports === 'object') {
+        var v = factory(require, exports); if (v !== undefined) module.exports = v;
     }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "lodash", "./enums"], factory);
+    else if (typeof define === 'function' && define.amd) {
+        define(dependencies, factory);
     }
-})(function (require, exports) {
+})(["require", "exports", "lodash", "./enums"], function (require, exports) {
     "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
     const _ = require("lodash");
     const enums_1 = require("./enums");
     let resetminx = false, resetmaxx = false, resetminy = false, resetmaxy = false;
@@ -1551,17 +1547,15 @@
 });
 
 },{"./enums":5,"lodash":18}],3:[function(require,module,exports){
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
+(function (dependencies, factory) {
+    if (typeof module === 'object' && typeof module.exports === 'object') {
+        var v = factory(require, exports); if (v !== undefined) module.exports = v;
     }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports"], factory);
+    else if (typeof define === 'function' && define.amd) {
+        define(dependencies, factory);
     }
-})(function (require, exports) {
+})(["require", "exports"], function (require, exports) {
     "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
     class _Contact {
     }
     exports._Contact = _Contact;
@@ -1574,17 +1568,15 @@
 });
 
 },{}],4:[function(require,module,exports){
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
+(function (dependencies, factory) {
+    if (typeof module === 'object' && typeof module.exports === 'object') {
+        var v = factory(require, exports); if (v !== undefined) module.exports = v;
     }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "lodash", "../vbh/binaryTree", "./body", "./body"], factory);
+    else if (typeof define === 'function' && define.amd) {
+        define(dependencies, factory);
     }
-})(function (require, exports) {
+})(["require", "exports", "lodash", "../vbh/binaryTree", "./body", "./body"], function (require, exports) {
     "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
     const _ = require("lodash");
     const binaryTree_1 = require("../vbh/binaryTree");
     const body_1 = require("./body");
@@ -2040,9 +2032,6 @@
                     }
                     this._parent._childs.splice(this._parent._childs.indexOf(this), 1);
                     this._parent = null;
-                    // #################################
-                    // REMOVE PARENT - END
-                    // #################################
                 }
                 if (parent) {
                     // #################################
@@ -2093,9 +2082,6 @@
                         parent._childs.push(this);
                     }
                     this._parentType = parentType;
-                    // #################################
-                    // SET PARENT - END
-                    // #################################
                 }
             }
             else if (parent && parentType != this._parentType) {
@@ -2399,17 +2385,15 @@
 });
 
 },{"../vbh/binaryTree":7,"./body":2,"lodash":18}],5:[function(require,module,exports){
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
+(function (dependencies, factory) {
+    if (typeof module === 'object' && typeof module.exports === 'object') {
+        var v = factory(require, exports); if (v !== undefined) module.exports = v;
     }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports"], factory);
+    else if (typeof define === 'function' && define.amd) {
+        define(dependencies, factory);
     }
-})(function (require, exports) {
+})(["require", "exports"], function (require, exports) {
     "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
     exports.LayerCollisionRule = {
         ALWAYS: "always",
         NEVER: "never",
@@ -2435,17 +2419,15 @@
 });
 
 },{}],6:[function(require,module,exports){
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
+(function (dependencies, factory) {
+    if (typeof module === 'object' && typeof module.exports === 'object') {
+        var v = factory(require, exports); if (v !== undefined) module.exports = v;
     }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "lodash", "./entity", "./body", "../vbh/vbh", "../vbh/binaryTree", "./enums"], factory);
+    else if (typeof define === 'function' && define.amd) {
+        define(dependencies, factory);
     }
-})(function (require, exports) {
+})(["require", "exports", "lodash", "./entity", "./body", "../vbh/vbh", "../vbh/binaryTree", "./enums"], function (require, exports) {
     "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
     const _ = require("lodash");
     const entity_1 = require("./entity");
     const body_1 = require("./body");
@@ -3436,17 +3418,15 @@
 });
 
 },{"../vbh/binaryTree":7,"../vbh/vbh":8,"./body":2,"./entity":4,"./enums":5,"lodash":18}],7:[function(require,module,exports){
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
+(function (dependencies, factory) {
+    if (typeof module === 'object' && typeof module.exports === 'object') {
+        var v = factory(require, exports); if (v !== undefined) module.exports = v;
     }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "./vbh"], factory);
+    else if (typeof define === 'function' && define.amd) {
+        define(dependencies, factory);
     }
-})(function (require, exports) {
+})(["require", "exports", "./vbh"], function (require, exports) {
     "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
     const vbh_1 = require("./vbh");
     let tmpAABB = { minX: 0, minY: 0, maxX: 0, maxY: 0 };
     class BinaryTree {
@@ -3830,17 +3810,15 @@
 });
 
 },{"./vbh":8}],8:[function(require,module,exports){
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
+(function (dependencies, factory) {
+    if (typeof module === 'object' && typeof module.exports === 'object') {
+        var v = factory(require, exports); if (v !== undefined) module.exports = v;
     }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "lodash"], factory);
+    else if (typeof define === 'function' && define.amd) {
+        define(dependencies, factory);
     }
-})(function (require, exports) {
+})(["require", "exports", "lodash"], function (require, exports) {
     "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
     const _ = require("lodash");
     class SimpleVBH {
         constructor() {
@@ -3952,17 +3930,15 @@
 });
 
 },{"lodash":18}],9:[function(require,module,exports){
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
+(function (dependencies, factory) {
+    if (typeof module === 'object' && typeof module.exports === 'object') {
+        var v = factory(require, exports); if (v !== undefined) module.exports = v;
     }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports"], factory);
+    else if (typeof define === 'function' && define.amd) {
+        define(dependencies, factory);
     }
-})(function (require, exports) {
+})(["require", "exports"], function (require, exports) {
     "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
     function follow(script, entity, time, delta) {
         script.testbed.xCam = entity.globalx;
         script.testbed.yCam = entity.globaly;
@@ -3971,17 +3947,15 @@
 });
 
 },{}],10:[function(require,module,exports){
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
+(function (dependencies, factory) {
+    if (typeof module === 'object' && typeof module.exports === 'object') {
+        var v = factory(require, exports); if (v !== undefined) module.exports = v;
     }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports"], factory);
+    else if (typeof define === 'function' && define.amd) {
+        define(dependencies, factory);
     }
-})(function (require, exports) {
+})(["require", "exports"], function (require, exports) {
     "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
     function input(script, entity, leftKey, rightKey, upKey, downKey) {
         script.keyDown(leftKey || 'q', () => { entity.moveLeft = true; entity.moveRight = false; });
         script.keyUp(leftKey || 'q', () => { entity.moveLeft = false; });
@@ -4027,17 +4001,15 @@
 });
 
 },{}],11:[function(require,module,exports){
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
+(function (dependencies, factory) {
+    if (typeof module === 'object' && typeof module.exports === 'object') {
+        var v = factory(require, exports); if (v !== undefined) module.exports = v;
     }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports"], factory);
+    else if (typeof define === 'function' && define.amd) {
+        define(dependencies, factory);
     }
-})(function (require, exports) {
+})(["require", "exports"], function (require, exports) {
     "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
     function input(script, entity, toggleMove, leftKey, rightKey, upKey, downKey) {
         script.keyDown(leftKey || 'q', () => { entity.moveLeft = true; entity.moveRight = false; });
         if (!toggleMove) {
@@ -4081,17 +4053,15 @@
 });
 
 },{}],12:[function(require,module,exports){
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
+(function (dependencies, factory) {
+    if (typeof module === 'object' && typeof module.exports === 'object') {
+        var v = factory(require, exports); if (v !== undefined) module.exports = v;
     }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports"], factory);
+    else if (typeof define === 'function' && define.amd) {
+        define(dependencies, factory);
     }
-})(function (require, exports) {
+})(["require", "exports"], function (require, exports) {
     "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
     function input(script, entity, toggleMove, leftKey, rightKey, upKey, downKey) {
         script.keyDown(leftKey || 'q', () => { entity.moveLeft = true; entity.moveRight = false; });
         if (!toggleMove) {
@@ -4129,17 +4099,15 @@
 });
 
 },{}],13:[function(require,module,exports){
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
+(function (dependencies, factory) {
+    if (typeof module === 'object' && typeof module.exports === 'object') {
+        var v = factory(require, exports); if (v !== undefined) module.exports = v;
     }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "mousetrap", "mouse-wheel", "../lib", "../lib/vbh/binaryTree", "./scripts/gridScripts", "./scripts/simulScripts", "./scripts/performanceScripts"], factory);
+    else if (typeof define === 'function' && define.amd) {
+        define(dependencies, factory);
     }
-})(function (require, exports) {
+})(["require", "exports", "mousetrap", "mouse-wheel", "../lib", "../lib/vbh/binaryTree", "./scripts/gridScripts", "./scripts/simulScripts", "./scripts/performanceScripts"], function (require, exports) {
     "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
     const mousetrap = require("mousetrap");
     const wheel = require("mouse-wheel");
     const lib_1 = require("../lib");
@@ -4682,17 +4650,15 @@
 });
 
 },{"../lib":1,"../lib/vbh/binaryTree":7,"./scripts/gridScripts":15,"./scripts/performanceScripts":16,"./scripts/simulScripts":17,"mouse-wheel":19,"mousetrap":20}],14:[function(require,module,exports){
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
+(function (dependencies, factory) {
+    if (typeof module === 'object' && typeof module.exports === 'object') {
+        var v = factory(require, exports); if (v !== undefined) module.exports = v;
     }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports"], factory);
+    else if (typeof define === 'function' && define.amd) {
+        define(dependencies, factory);
     }
-})(function (require, exports) {
+})(["require", "exports"], function (require, exports) {
     "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
     class Script {
         get world() { return this._world; }
         get testbed() { return this._testbed; }
@@ -4709,17 +4675,15 @@
 });
 
 },{}],15:[function(require,module,exports){
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
+(function (dependencies, factory) {
+    if (typeof module === 'object' && typeof module.exports === 'object') {
+        var v = factory(require, exports); if (v !== undefined) module.exports = v;
     }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "lodash", "../script", "../../lib"], factory);
+    else if (typeof define === 'function' && define.amd) {
+        define(dependencies, factory);
     }
-})(function (require, exports) {
+})(["require", "exports", "lodash", "../script", "../../lib"], function (require, exports) {
     "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
     const _ = require("lodash");
     const script_1 = require("../script");
     const lib_1 = require("../../lib");
@@ -4882,17 +4846,15 @@
 });
 
 },{"../../lib":1,"../script":14,"lodash":18}],16:[function(require,module,exports){
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
+(function (dependencies, factory) {
+    if (typeof module === 'object' && typeof module.exports === 'object') {
+        var v = factory(require, exports); if (v !== undefined) module.exports = v;
     }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "../script"], factory);
+    else if (typeof define === 'function' && define.amd) {
+        define(dependencies, factory);
     }
-})(function (require, exports) {
+})(["require", "exports", "../script"], function (require, exports) {
     "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
     const script_1 = require("../script");
     class Script1 extends script_1.Script {
         constructor() {
@@ -4930,17 +4892,15 @@
 });
 
 },{"../script":14}],17:[function(require,module,exports){
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
+(function (dependencies, factory) {
+    if (typeof module === 'object' && typeof module.exports === 'object') {
+        var v = factory(require, exports); if (v !== undefined) module.exports = v;
     }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "../script", "../../lib", "../controllers/fixSpeedController", "../controllers/characterController", "../controllers/forceAndDragController", "../controllers/cameraController"], factory);
+    else if (typeof define === 'function' && define.amd) {
+        define(dependencies, factory);
     }
-})(function (require, exports) {
+})(["require", "exports", "../script", "../../lib", "../controllers/fixSpeedController", "../controllers/characterController", "../controllers/forceAndDragController", "../controllers/cameraController"], function (require, exports) {
     "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
     const script_1 = require("../script");
     const lib_1 = require("../../lib");
     const fixSpeed = require("../controllers/fixSpeedController");
@@ -5530,19 +5490,61 @@
                 y: 0,
                 width: 1,
                 height: 1,
-                level: 1
+                level: 1000
             });
             this.ground = this.world.createEntity({
                 x: 0, y: -10,
                 level: 0
             });
             for (let i = 0; i < 4000; i++) {
-                this.ground.createLine({
-                    x: (Math.random() * 2 - 1) * 4000,
-                    y: (Math.random() / 2 - 1) * 8,
-                    size: Math.random() * 5 + 1,
-                    isHorizontal: true,
-                    side: "up"
+                let res = Math.random() * 24;
+                if (res < 15) {
+                    this.ground.createLine({
+                        x: (Math.random() * 2 - 1) * 4000,
+                        y: (Math.random() / 2 - 1) * 8,
+                        size: Math.random() * 5 + 1,
+                        isHorizontal: true,
+                        side: "up"
+                    });
+                }
+                else if (res < 19) {
+                    this.ground.createRect({
+                        x: (Math.random() * 2 - 1) * 4000,
+                        y: (Math.random() / 2 - 1) * 8,
+                        width: Math.random() * 5 + 1,
+                        height: Math.random() * 5 + 1,
+                        isSensor: res < 17
+                    });
+                }
+                else {
+                    this.ground.createLine({
+                        x: (Math.random() * 2 - 1) * 4000,
+                        y: (Math.random() / 2 - 1) * 8,
+                        size: Math.random() * 3 + 1,
+                        isHorizontal: false,
+                        side: res < 19 ? "left" : "right"
+                    });
+                }
+            }
+            this.movingPlatforms = [];
+            this.phase = [];
+            this.speed = [];
+            this.period = [];
+            this.orientation = [];
+            for (let i = 0; i < 40; i++) {
+                this.movingPlatforms.push(this.world.createEntity({
+                    x: Math.random() * 500 - 250,
+                    y: Math.random() * 10 - 5,
+                    level: i
+                }));
+                this.phase.push(Math.random() * 2);
+                this.speed.push(Math.random() * 10 + 1);
+                this.period.push(Math.random() * 3);
+                this.orientation.push(Math.random() > 0.7);
+                this.movingPlatforms[i].createRect({
+                    x: 0, y: 0,
+                    width: Math.random() * 4 + 1,
+                    height: 0.5
                 });
             }
             charController.input(this, this.rect);
@@ -5550,6 +5552,10 @@
         update(time, delta) {
             charController.update(this.rect, time, delta, 5);
             cameraController_1.follow(this, this.rect, time, delta);
+            for (let i = 0, len = this.movingPlatforms.length; i < len; i++) {
+                this.movingPlatforms[i].vx = this.orientation[i] ? 0 : Math.sin(this.phase[i] + time / this.period[i]) * this.speed[i];
+                this.movingPlatforms[i].vy = this.orientation[i] ? Math.sin(this.phase[i] + time / this.period[i]) * this.speed[i] : 0;
+            }
         }
     }
     exports.SimulScript1 = { id: "SimulScript1", category: "Specification", name: "Test 1: Free rect movement against single rect", description: "Move: ZQSD", script: () => new Script1() };
@@ -5566,7 +5572,13 @@
     exports.SimulScript12 = { id: "SimulScript12", category: "Specification", name: "Test 12: Aligned entities", description: "Move chararacter: ZQSD", script: () => new Script12() };
     exports.SimulScript13 = { id: "SimulScript13", category: "Specification", name: "Test 13: Sensors", description: "Move chararacter: ZQSD", script: () => new Script13() };
     exports.SimulScript14 = { id: "SimulScript14", category: "Specification", name: "Test 14: Hidden corner avoidance", description: "Move character ZQSD", script: () => new Script14() };
-    exports.SimulScript15 = { id: "SimulScript15", category: "Specification", name: "Test 15: Large world with one character", description: "Move character ZQSD", script: () => new Script15() };
+    exports.SimulScript15 = {
+        id: "SimulScript15",
+        category: "Specification",
+        name: "Test 15: Large world with one character",
+        description: "Move character ZQSD\nblue bodies are sensors, click on show contacts to see the overlap with sensors",
+        script: () => new Script15()
+    };
 });
 
 },{"../../lib":1,"../controllers/cameraController":9,"../controllers/characterController":10,"../controllers/fixSpeedController":11,"../controllers/forceAndDragController":12,"../script":14}],18:[function(require,module,exports){
