@@ -7,6 +7,10 @@ A simple webpage that showcase my physics engine called "gridlike". Its a physic
 
 Pick the scripts and follow the instructions, you'll quickly get a sense of the scope of the library.
 
+### [Hexagon world generation](https://gibss.github.io/test/RAE-world-generation)
+
+A web page that showcases a procedural generation library that creates top down hex world maps.
+
 ### [Modified bush test](https://gibss.github.io/test/rbush)
 
 A test of a modified version of the [rbush library](https://github.com/mourner/rbush). My version very simply adds element movement.

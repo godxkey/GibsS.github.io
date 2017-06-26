@@ -1,0 +1,61 @@
+<html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>RAE - World gen</title>
+
+    <script src="index.js" type=""></script>
+    <style>
+        body {
+            overflow: hidden;
+        }
+        h1, h2, h3 {
+            margin: 5px;
+        }
+        h1 { font-size: 1.5em; }
+        h2 { font-size: 1.17em; }
+        h3 { font-size: 0.9em; }
+        #container {
+            display: flex;
+            flex-direction: row;
+            margin: 5px;
+            height: 100%;
+            width: 100%;
+        }
+        #canvas {
+            width: 70%;
+            margin-right: 5px;
+            border: 1px solid black; 
+        }
+        #params {
+            padding: 5px;
+            width: 30%;
+            border: 1px solid black; 
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <canvas id="canvas"></canvas>
+        <div id="params">
+            <h1>RAE - World generation</h1>
+            <button id="gen-btn">Generate!</button>
+            <button id="gen-seed-btn">Generate (new seed)</button> <br>
+            Width: <input id="width-input" type="text" value=200></input> <br>
+            Height: <input id="height-input" type="text" value=200></input> <br>
+            Seed: <input id="seed-input" type="text" value="some seed."></input> <br>
+            <hr>
+            <h2>Properties</h2>
+            <div id="properties">
+
+            </div>
+            <hr>
+            <h2>Algorithms</h2>
+            <div id="algorithms">
+
+            <div>
+        </div>
+    </div>
+</body>
+</html>
