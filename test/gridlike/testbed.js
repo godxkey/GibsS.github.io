@@ -4847,16 +4847,16 @@
     exports.ExperimentScript1 = {
         id: "Experiment1",
         category: "Experiment",
-        name: "Test 1: Grids and more grids",
+        name: "Experiment 1: Grids and more grids",
         description: "Move character: ZQSD\nMove grids: TFGH\nCreate grid: A\nChoose to place block: W\nChoose to place oneway lines: XCVB",
         script: () => new Script1()
     };
     exports.ExperimentScript2 = {
         id: "Experiment2",
         category: "Experiment",
-        name: "Test 2: Large world with one character",
+        name: "Experiment 2: Large world with one character",
         description: "Move character ZQSD\nblue bodies are sensors,\nclick on show contacts to see\nthe overlap with sensors",
-        script: () => new Script1()
+        script: () => new Script2()
     };
 });
 
