@@ -527,7 +527,10 @@
         get tileSize() { return this._tileSize; }
         set tileSize(val) { console.log("[ERROR] can't set Grid.tileSize"); }
         globalToBlock(x, y) {
-            return { x: Math.floor(x - this._x - this._xdownLeft), y: Math.floor(y - this._y - this._ydownLeft) };
+            return {
+                x: Math.floor(x - this.globalx),
+                y: Math.floor(y - this.globaly)
+            };
         }
         getBlock(x, y) {
             x -= this._xdownLeft;
@@ -1546,7 +1549,7 @@
     exports.SubGrid = SubGrid;
 });
 
-},{"./enums":5,"lodash":18}],3:[function(require,module,exports){
+},{"./enums":5,"lodash":19}],3:[function(require,module,exports){
 (function (dependencies, factory) {
     if (typeof module === 'object' && typeof module.exports === 'object') {
         var v = factory(require, exports); if (v !== undefined) module.exports = v;
@@ -2384,7 +2387,7 @@
     exports.Entity = Entity;
 });
 
-},{"../vbh/binaryTree":7,"./body":2,"lodash":18}],5:[function(require,module,exports){
+},{"../vbh/binaryTree":7,"./body":2,"lodash":19}],5:[function(require,module,exports){
 (function (dependencies, factory) {
     if (typeof module === 'object' && typeof module.exports === 'object') {
         var v = factory(require, exports); if (v !== undefined) module.exports = v;
@@ -3417,7 +3420,7 @@
     exports.World = World;
 });
 
-},{"../vbh/binaryTree":7,"../vbh/vbh":8,"./body":2,"./entity":4,"./enums":5,"lodash":18}],7:[function(require,module,exports){
+},{"../vbh/binaryTree":7,"../vbh/vbh":8,"./body":2,"./entity":4,"./enums":5,"lodash":19}],7:[function(require,module,exports){
 (function (dependencies, factory) {
     if (typeof module === 'object' && typeof module.exports === 'object') {
         var v = factory(require, exports); if (v !== undefined) module.exports = v;
@@ -3929,7 +3932,7 @@
     exports.SimpleMoveVBH = SimpleMoveVBH;
 });
 
-},{"lodash":18}],9:[function(require,module,exports){
+},{"lodash":19}],9:[function(require,module,exports){
 (function (dependencies, factory) {
     if (typeof module === 'object' && typeof module.exports === 'object') {
         var v = factory(require, exports); if (v !== undefined) module.exports = v;
@@ -4101,7 +4104,7 @@
     else if (typeof define === 'function' && define.amd) {
         define(dependencies, factory);
     }
-})(["require", "exports", "mousetrap", "mouse-wheel", "../lib", "../lib/vbh/binaryTree", "./scripts/gridScripts", "./scripts/simulScripts", "./scripts/performanceScripts"], function (require, exports) {
+})(["require", "exports", "mousetrap", "mouse-wheel", "../lib", "../lib/vbh/binaryTree", "./scripts/gridScripts", "./scripts/simulScripts", "./scripts/performanceScripts", "./scripts/experimentScripts"], function (require, exports) {
     "use strict";
     const mousetrap = require("mousetrap");
     const wheel = require("mouse-wheel");
@@ -4171,7 +4174,7 @@
             this._useBinaryTreeRadio.checked = true;
             this.useRBush = this._useBinaryTreeRadio.checked || true;
             this.showBroadphaseStructure = this._showBroadphaseStructure.checked || false;
-            this.showLogs = this._showLogs.checked || false;
+            this.showLogs = this._showLogs.checked || true;
             this._showEntityRadio.onclick = () => {
                 this.showEntity = !this.showEntity;
                 this._showEntityRadio.checked = this.showEntity;
@@ -4215,8 +4218,8 @@
             }, true);
             this.canvas.onclick = (e) => {
                 if (this.zoom != 0 && this.world && this.script) {
-                    let x = (e.clientX - this.canvas.width / 2) / this.zoom + this.xCam;
-                    let y = -(e.clientY - this.canvas.height / 2) / this.zoom + this.yCam;
+                    let x = (e.offsetX - this.canvas.width / 2) / this.zoom + this.xCam;
+                    let y = -(e.offsetY - this.canvas.height / 2) / this.zoom + this.yCam;
                     let query = this.world.queryPoint(x, y);
                     if (query) {
                         if (query.length > 0) {
@@ -4615,8 +4618,11 @@
     const gridScripts_1 = require("./scripts/gridScripts");
     const simulScripts_1 = require("./scripts/simulScripts");
     const performanceScripts_1 = require("./scripts/performanceScripts");
+    const experimentScripts_1 = require("./scripts/experimentScripts");
     window.onload = () => {
         let testbed = new Testbed();
+        testbed.addScript(experimentScripts_1.ExperimentScript1);
+        testbed.addScript(experimentScripts_1.ExperimentScript2);
         testbed.addScript(gridScripts_1.GridScript1);
         testbed.addScript(gridScripts_1.GridScript2);
         testbed.addScript(gridScripts_1.GridScript3);
@@ -4637,14 +4643,13 @@
         testbed.addScript(simulScripts_1.SimulScript12);
         testbed.addScript(simulScripts_1.SimulScript13);
         testbed.addScript(simulScripts_1.SimulScript14);
-        testbed.addScript(simulScripts_1.SimulScript15);
         testbed.addScript(performanceScripts_1.PerformanceScript1);
-        testbed.start(simulScripts_1.SimulScript15.id);
+        testbed.start(experimentScripts_1.ExperimentScript1.id);
         testbed.resetScriptList();
     };
 });
 
-},{"../lib":1,"../lib/vbh/binaryTree":7,"./scripts/gridScripts":15,"./scripts/performanceScripts":16,"./scripts/simulScripts":17,"mouse-wheel":19,"mousetrap":20}],14:[function(require,module,exports){
+},{"../lib":1,"../lib/vbh/binaryTree":7,"./scripts/experimentScripts":15,"./scripts/gridScripts":16,"./scripts/performanceScripts":17,"./scripts/simulScripts":18,"mouse-wheel":20,"mousetrap":21}],14:[function(require,module,exports){
 (function (dependencies, factory) {
     if (typeof module === 'object' && typeof module.exports === 'object') {
         var v = factory(require, exports); if (v !== undefined) module.exports = v;
@@ -4670,6 +4675,192 @@
 });
 
 },{}],15:[function(require,module,exports){
+(function (dependencies, factory) {
+    if (typeof module === 'object' && typeof module.exports === 'object') {
+        var v = factory(require, exports); if (v !== undefined) module.exports = v;
+    }
+    else if (typeof define === 'function' && define.amd) {
+        define(dependencies, factory);
+    }
+})(["require", "exports", "../script", "../../lib", "../controllers/characterController", "../controllers/forceAndDragController", "../controllers/cameraController"], function (require, exports) {
+    "use strict";
+    const script_1 = require("../script");
+    const lib_1 = require("../../lib");
+    const charController = require("../controllers/characterController");
+    const forceController = require("../controllers/forceAndDragController");
+    const cameraController_1 = require("../controllers/cameraController");
+    class Script1 extends script_1.Script {
+        constructor() {
+            super(...arguments);
+            this.level = 2;
+            this.blockType = 1;
+        }
+        init() {
+            this.rect = this.world.createRect({
+                x: 0,
+                y: 0,
+                width: 1,
+                height: 1,
+                level: 1000
+            });
+            this.ground = this.world.createGrid({
+                x: 0, y: 0,
+                level: 0,
+                width: 100, height: 100
+            });
+            let grid = this.ground.body;
+            grid.setBlockShape(-2, -2, 1);
+            grid.setBlockShape(-1, -2, 1);
+            grid.setBlockShape(0, -2, 1);
+            grid.setBlockShape(1, -2, 1);
+            grid.setBlockShape(2, -2, 1);
+            grid = this.world.createGrid({
+                x: -6, y: 0,
+                level: 1,
+                width: 80, height: 80
+            }).body;
+            grid.setBlockShape(-2, 0, 1);
+            grid.setBlockShape(-1, 0, 1);
+            grid.setBlockShape(0, 0, 1);
+            grid.setBlockShape(1, 0, 1);
+            grid.setBlockShape(2, 0, 1);
+            charController.input(this, this.rect);
+            this.keyDown('a', () => {
+                grid = this.world.createGrid({
+                    x: this.rect.globalx, y: this.rect.globaly + 5,
+                    level: this.level,
+                    width: 80, height: 80
+                }).body;
+                this.level++;
+                grid.setBlockShape(-2, 0, 1);
+                grid.setBlockShape(-1, 0, 1);
+                grid.setBlockShape(0, 0, 1);
+                grid.setBlockShape(1, 0, 1);
+                grid.setBlockShape(2, 0, 1);
+            });
+            forceController.input(this, grid.entity, false, 'f', 'h', 't', 'g');
+            this.keyDown('w', () => { this.blockType = 1; this.log("place blocks"); });
+            this.keyDown('x', () => { this.blockType = lib_1.UP_ONEWAY; this.log("place up facing lines"); });
+            this.keyDown('c', () => { this.blockType = lib_1.DOWN_ONEWAY; this.log("place down facing lines"); });
+            this.keyDown('v', () => { this.blockType = lib_1.LEFT_ONEWAY; this.log("place left facing lines"); });
+            this.keyDown('b', () => { this.blockType = lib_1.RIGHT_ONEWAY; this.log("place right facing lines"); });
+        }
+        update(time, delta) {
+            charController.update(this.rect, time, delta, 5);
+            cameraController_1.follow(this, this.rect, time, delta);
+            if (this.currentGrid) {
+                forceController.input(this, this.currentGrid.entity, false, 'f', 'h', 't', 'g');
+                forceController.update(this.currentGrid.entity, time, delta, 5);
+            }
+            if (this.rect.parent) {
+                this.currentGrid = this.rect.parent.body;
+            }
+        }
+        click(x, y, body) {
+            if (this.currentGrid) {
+                let point = this.currentGrid.globalToBlock(x, y);
+                let shape = this.currentGrid.getBlockShape(point.x, point.y);
+                if (shape) {
+                    this.currentGrid.setBlockShape(point.x, point.y, 0);
+                }
+                else {
+                    this.currentGrid.setBlockShape(point.x, point.y, this.blockType);
+                }
+            }
+        }
+    }
+    class Script2 extends script_1.Script {
+        init() {
+            this.rect = this.world.createRect({
+                x: 0,
+                y: 0,
+                width: 1,
+                height: 1,
+                level: 1000
+            });
+            this.ground = this.world.createEntity({
+                x: 0, y: -10,
+                level: 0
+            });
+            for (let i = 0; i < 4000; i++) {
+                let res = Math.random() * 24;
+                if (res < 15) {
+                    this.ground.createLine({
+                        x: (Math.random() * 2 - 1) * 4000,
+                        y: (Math.random() / 2 - 1) * 8,
+                        size: Math.random() * 5 + 1,
+                        isHorizontal: true,
+                        side: "up"
+                    });
+                }
+                else if (res < 19) {
+                    this.ground.createRect({
+                        x: (Math.random() * 2 - 1) * 4000,
+                        y: (Math.random() / 2 - 1) * 8,
+                        width: Math.random() * 5 + 1,
+                        height: Math.random() * 5 + 1,
+                        isSensor: res < 17
+                    });
+                }
+                else {
+                    this.ground.createLine({
+                        x: (Math.random() * 2 - 1) * 4000,
+                        y: (Math.random() / 2 - 1) * 8,
+                        size: Math.random() * 3 + 1,
+                        isHorizontal: false,
+                        side: res < 19 ? "left" : "right"
+                    });
+                }
+            }
+            this.movingPlatforms = [];
+            this.phase = [];
+            this.speed = [];
+            this.period = [];
+            this.orientation = [];
+            for (let i = 0; i < 40; i++) {
+                this.movingPlatforms.push(this.world.createEntity({
+                    x: Math.random() * 500 - 250,
+                    y: Math.random() * 10 - 10,
+                    level: i
+                }));
+                this.phase.push(Math.random() * 2);
+                this.speed.push(Math.random() * 10 + 1);
+                this.period.push(Math.random() * 3);
+                this.orientation.push(Math.random() > 0.7);
+                this.movingPlatforms[i].createRect({
+                    x: 0, y: 0,
+                    width: Math.random() * 4 + 1,
+                    height: 0.5
+                });
+            }
+            charController.input(this, this.rect);
+        }
+        update(time, delta) {
+            charController.update(this.rect, time, delta, 5);
+            cameraController_1.follow(this, this.rect, time, delta);
+            for (let i = 0, len = this.movingPlatforms.length; i < len; i++) {
+                this.movingPlatforms[i].vx = this.orientation[i] ? 0 : Math.sin(this.phase[i] + time / this.period[i]) * this.speed[i];
+                this.movingPlatforms[i].vy = this.orientation[i] ? Math.sin(this.phase[i] + time / this.period[i]) * this.speed[i] : 0;
+            }
+        }
+    }
+    exports.ExperimentScript1 = {
+        id: "Experiment1",
+        category: "Experiment",
+        name: "Test 1: Grids and more grids",
+        description: "Move character: ZQSD\nMove grids: TFGH\nCreate grid: A\nChoose to place block: W\nChoose to place oneway lines: XCVB",
+        script: () => new Script1()
+    };
+    exports.ExperimentScript2 = {
+        id: "Experiment2",
+        category: "Experiment",
+        name: "Test 2: Large world with one character",
+        description: "Move character ZQSD\nblue bodies are sensors,\nclick on show contacts to see\nthe overlap with sensors",
+        script: () => new Script1()
+    };
+});
+
+},{"../../lib":1,"../controllers/cameraController":9,"../controllers/characterController":10,"../controllers/forceAndDragController":12,"../script":14}],16:[function(require,module,exports){
 (function (dependencies, factory) {
     if (typeof module === 'object' && typeof module.exports === 'object') {
         var v = factory(require, exports); if (v !== undefined) module.exports = v;
@@ -4840,7 +5031,7 @@
     exports.GridScript6 = { id: "GridScript6", category: "Grid generation", name: "Grid script 6", description: null, script: () => new Script6() };
 });
 
-},{"../../lib":1,"../script":14,"lodash":18}],16:[function(require,module,exports){
+},{"../../lib":1,"../script":14,"lodash":19}],17:[function(require,module,exports){
 (function (dependencies, factory) {
     if (typeof module === 'object' && typeof module.exports === 'object') {
         var v = factory(require, exports); if (v !== undefined) module.exports = v;
@@ -4886,7 +5077,7 @@
     exports.PerformanceScript1 = { id: "PerformanceScript1", category: "Performance", name: "Performance 1", description: null, script: () => new Script1() };
 });
 
-},{"../script":14}],17:[function(require,module,exports){
+},{"../script":14}],18:[function(require,module,exports){
 (function (dependencies, factory) {
     if (typeof module === 'object' && typeof module.exports === 'object') {
         var v = factory(require, exports); if (v !== undefined) module.exports = v;
@@ -5478,81 +5669,6 @@
             cameraController_1.follow(this, this.rect, time, delta);
         }
     }
-    class Script15 extends script_1.Script {
-        init() {
-            this.rect = this.world.createRect({
-                x: 0,
-                y: 0,
-                width: 1,
-                height: 1,
-                level: 1000
-            });
-            this.ground = this.world.createEntity({
-                x: 0, y: -10,
-                level: 0
-            });
-            for (let i = 0; i < 4000; i++) {
-                let res = Math.random() * 24;
-                if (res < 15) {
-                    this.ground.createLine({
-                        x: (Math.random() * 2 - 1) * 4000,
-                        y: (Math.random() / 2 - 1) * 8,
-                        size: Math.random() * 5 + 1,
-                        isHorizontal: true,
-                        side: "up"
-                    });
-                }
-                else if (res < 19) {
-                    this.ground.createRect({
-                        x: (Math.random() * 2 - 1) * 4000,
-                        y: (Math.random() / 2 - 1) * 8,
-                        width: Math.random() * 5 + 1,
-                        height: Math.random() * 5 + 1,
-                        isSensor: res < 17
-                    });
-                }
-                else {
-                    this.ground.createLine({
-                        x: (Math.random() * 2 - 1) * 4000,
-                        y: (Math.random() / 2 - 1) * 8,
-                        size: Math.random() * 3 + 1,
-                        isHorizontal: false,
-                        side: res < 19 ? "left" : "right"
-                    });
-                }
-            }
-            this.movingPlatforms = [];
-            this.phase = [];
-            this.speed = [];
-            this.period = [];
-            this.orientation = [];
-            for (let i = 0; i < 40; i++) {
-                this.movingPlatforms.push(this.world.createEntity({
-                    x: Math.random() * 500 - 250,
-                    y: Math.random() * 10 - 10,
-                    level: i
-                }));
-                this.phase.push(Math.random() * 2);
-                this.speed.push(Math.random() * 10 + 1);
-                this.period.push(Math.random() * 3);
-                this.orientation.push(Math.random() > 0.7);
-                this.movingPlatforms[i].createRect({
-                    x: 0, y: 0,
-                    width: Math.random() * 4 + 1,
-                    height: 0.5
-                });
-            }
-            charController.input(this, this.rect);
-        }
-        update(time, delta) {
-            charController.update(this.rect, time, delta, 5);
-            cameraController_1.follow(this, this.rect, time, delta);
-            for (let i = 0, len = this.movingPlatforms.length; i < len; i++) {
-                this.movingPlatforms[i].vx = this.orientation[i] ? 0 : Math.sin(this.phase[i] + time / this.period[i]) * this.speed[i];
-                this.movingPlatforms[i].vy = this.orientation[i] ? Math.sin(this.phase[i] + time / this.period[i]) * this.speed[i] : 0;
-            }
-        }
-    }
     exports.SimulScript1 = { id: "SimulScript1", category: "Specification", name: "Test 1: Free rect movement against single rect", description: "Move: ZQSD", script: () => new Script1() };
     exports.SimulScript2 = { id: "SimulScript2", category: "Specification", name: "Test 2: Corner test", description: null, script: () => new Script2() };
     exports.SimulScript3 = { id: "SimulScript3", category: "Specification", name: "Test 3: Free rect movement against single moving rect", description: "Move: ZQSD", script: () => new Script3() };
@@ -5567,16 +5683,9 @@
     exports.SimulScript12 = { id: "SimulScript12", category: "Specification", name: "Test 12: Aligned entities", description: "Move chararacter: ZQSD", script: () => new Script12() };
     exports.SimulScript13 = { id: "SimulScript13", category: "Specification", name: "Test 13: Sensors", description: "Move chararacter: ZQSD", script: () => new Script13() };
     exports.SimulScript14 = { id: "SimulScript14", category: "Specification", name: "Test 14: Hidden corner avoidance", description: "Move character ZQSD", script: () => new Script14() };
-    exports.SimulScript15 = {
-        id: "SimulScript15",
-        category: "Specification",
-        name: "Test 15: Large world with one character",
-        description: "Move character ZQSD\nblue bodies are sensors, click on show contacts to see the overlap with sensors",
-        script: () => new Script15()
-    };
 });
 
-},{"../../lib":1,"../controllers/cameraController":9,"../controllers/characterController":10,"../controllers/fixSpeedController":11,"../controllers/forceAndDragController":12,"../script":14}],18:[function(require,module,exports){
+},{"../../lib":1,"../controllers/cameraController":9,"../controllers/characterController":10,"../controllers/fixSpeedController":11,"../controllers/forceAndDragController":12,"../script":14}],19:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -22664,7 +22773,7 @@
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],19:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 'use strict'
 
 var toPX = require('to-px')
@@ -22706,7 +22815,7 @@ function mouseWheelListen(element, callback, noScroll) {
   return listener
 }
 
-},{"to-px":22}],20:[function(require,module,exports){
+},{"to-px":23}],21:[function(require,module,exports){
 /*global define:false */
 /**
  * Copyright 2012-2017 Craig Campbell
@@ -23752,7 +23861,7 @@ function mouseWheelListen(element, callback, noScroll) {
     }
 }) (typeof window !== 'undefined' ? window : null, typeof  window !== 'undefined' ? document : null);
 
-},{}],21:[function(require,module,exports){
+},{}],22:[function(require,module,exports){
 module.exports = function parseUnit(str, out) {
     if (!out)
         out = [ 0, '' ]
@@ -23763,7 +23872,7 @@ module.exports = function parseUnit(str, out) {
     out[1] = str.match(/[\d.\-\+]*\s*(.*)/)[1] || ''
     return out
 }
-},{}],22:[function(require,module,exports){
+},{}],23:[function(require,module,exports){
 'use strict'
 
 var parseUnit = require('parse-unit')
@@ -23824,4 +23933,4 @@ function toPX(str, element) {
   }
   return 1
 }
-},{"parse-unit":21}]},{},[13]);
+},{"parse-unit":22}]},{},[13]);
