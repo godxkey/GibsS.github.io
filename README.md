@@ -3,9 +3,13 @@ my js experiments + whatever
 
 ### [Gridlike testbed](https://gibss.github.io/test/gridlike)
 
-A simple webpage that showcase my physics engine called "gridlike". Its a physics engine with a focus on being very simple to bootstrap and use to make platformers of all kind and terraria-likes.
+A simple webpage that showcases my physics engine: gridlike. Its a library with a focus on being very simple to bootstrap and use to make 2D platformers and terraria-likes.
 
-Pick the scripts and follow the instructions, you'll quickly get a sense of the scope of the library.
+Checkout the different scripts and follow the instructions, you'll quickly get a sense of the scope of the library.
+
+### [Space battle v2](http://space-battle-v2.herokuapp.com/#/board)
+
+An improved prototype for a digital TCG. The players create their own fleet of space ships and fight in a simultaneous-turn-based game.
 
 ### [Hexagon world generation](https://gibss.github.io/test/RAE-world-generation)
 
@@ -17,11 +21,13 @@ A test of a modified version of the [rbush library](https://github.com/mourner/r
 
 ### [Rect collider test](https://gibss.github.io/test/rectCollider/)
 
-A test of RectCollider, a physics library focused on exact collision (no out of place object penetration) and allowing the creation of a "hierarchy of weights", defining who can affect who's trajectory simply.
+A test of RectCollider, a physics library focused on exact collision (no object penetration) and allowing the creation of a "hierarchy of weights", defining who can affect who's trajectory simply.
 
 The library is still at a very experimental stage and requires the handling of a few edge cases. However, it can still be tested and used as is.
 
-### [Space vagrant-ship battle](https://space-vagrant-prototype.herokuapp.com/#/board)
+### [Space vagrant - space battle](https://space-vagrant-prototype.herokuapp.com/#/board)
+
+The predecessor to the space battle game above.
 
 A digital 'card game' with mechanics inspired from FTL. Each player own a set
 of ships with unique sets of 'systems' and must choose which of them to use to
@@ -34,5 +40,6 @@ find a right balance for future iterations.
 
 ### [Pet bot client](https://gibss.github.io/test/pet-bot-client/)
 
+[The server is down]
 A client for an online chat bot of my making. The bot is build using a trained sequence to sequence machine learning model. Have a go at it!
 Might require cloning the repository and running it locally as their might be CORS issues.
