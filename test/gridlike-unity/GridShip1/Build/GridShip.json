@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "GridShip.data.unityweb",
+"asmCodeUrl": "GridShip.asm.code.unityweb",
+"asmMemoryUrl": "GridShip.asm.memory.unityweb",
+"asmFrameworkUrl": "GridShip.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#222C36"
+}
