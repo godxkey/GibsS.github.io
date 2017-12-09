@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "Gridship.data.unityweb",
+"asmCodeUrl": "Gridship.asm.code.unityweb",
+"asmMemoryUrl": "Gridship.asm.memory.unityweb",
+"asmFrameworkUrl": "Gridship.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#222C36"
+}
