@@ -3,9 +3,15 @@ my js experiments + whatever
 
 ### [Gridlike testbed](https://gibss.github.io/test/gridlike)
 
-A simple webpage that showcases my physics engine: gridlike. Its a library with a focus on being very simple to bootstrap and use to make 2D platformers and terraria-likes.
+A simple web page that showcases my physics engine: gridlike. Its a typescript library with a focus on being very simple to bootstrap and use to make web 2D platformers and terraria-likes.
 
 Checkout the different scripts and follow the instructions, you'll quickly get a sense of the scope of the library.
+
+### [Gridlike-Unity demo](https://gibss.github.io/test/gridlike-unity/GridShip2/)
+
+A demo of the unity version of gridlike. There is a small (see tiny) amount of gameplay but this showcases a few of the things you can do with gridlike.
+
+Just like its typescript counterpart above, the library serves as foundation to make terraria likes, 2D platformers with a focus on destructible (or buildable) tile based terrain.
 
 ### [Space battle v2](http://space-battle-v2.herokuapp.com/#/board)
 
