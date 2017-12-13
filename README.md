@@ -7,7 +7,7 @@ A simple web page that showcases my physics engine: gridlike. Its a typescript l
 
 Checkout the different scripts and follow the instructions, you'll quickly get a sense of the scope of the library.
 
-### [Gridlike-Unity demo](https://gibss.github.io/test/gridlike-unity/GridShip2/)
+### [Gridlike-Unity demo](https://gibss.github.io/test/gridlike-unity/Gridship3/)
 
 A demo of the unity version of gridlike. There is a small (see tiny) amount of gameplay but this showcases a few of the things you can do with gridlike.
 
