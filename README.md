@@ -1,6 +1,20 @@
 # GibsS.github.io
 my js experiments + whatever
 
+## Human Ant Farm
+
+My current project.
+
+Human Ant Farm is a simulation game where the player can create a 2d world in which he can observe humans moving around, surviving, creating buildings and making social bonds.
+
+The project is quite a big undertaking so I decided to split it in a few sub-projets.
+
+### [World generation](https://gibss.github.io/test/hat/world-gen)
+
+Before actually running the simulation, human ant farm allows the user to play around with different world generation algorithms to find the world the player wants to see. In this sub-project I implement both the different world generation algorithms of the game and the liquid logic.
+
+## Experiments
+
 ### [Gridlike testbed](https://gibss.github.io/test/gridlike)
 
 A simple web page that showcases my physics engine: gridlike. Its a typescript library with a focus on being very simple to bootstrap and use to make web 2D platformers and terraria-likes.
