@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "LazerPrototype.data.unityweb",
+"asmCodeUrl": "LazerPrototype.asm.code.unityweb",
+"asmMemoryUrl": "LazerPrototype.asm.memory.unityweb",
+"asmFrameworkUrl": "LazerPrototype.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}

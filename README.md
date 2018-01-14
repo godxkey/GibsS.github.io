@@ -21,15 +21,23 @@ A simple web page that showcases my physics engine: gridlike. Its a typescript l
 
 Checkout the different scripts and follow the instructions, you'll quickly get a sense of the scope of the library.
 
-### [Gridlike-Unity demo](https://gibss.github.io/test/gridlike-unity/GridShip2/)
+[github page](https://github.com/GibsS/gridlike)
+
+### [Gridlike-Unity demo](https://gibss.github.io/test/gridlike-unity/Gridship3/)
 
 A demo of the unity version of gridlike. There is a small (see tiny) amount of gameplay but this showcases a few of the things you can do with gridlike.
 
 Just like its typescript counterpart above, the library serves as foundation to make terraria likes, 2D platformers with a focus on destructible (or buildable) tile based terrain.
 
+[github page](https://github.com/GibsS/gridlike-Unity)
+
 ### [Space battle v2](http://space-battle-v2.herokuapp.com/#/board)
 
 An improved prototype for a digital TCG. The players create their own fleet of space ships and fight in a simultaneous-turn-based game.
+
+### [Cannon automaton - Lazer prototype](https://gibss.github.io/test/cannon-automaton/lazer-prototype)
+
+A mechanic i'd like to include in a game: A system that allows player's to create automatic contraptions using lazers in a 2D plane. This demo only showcases placing lazers and moving them around. An actual game using this mechanic would have "actors" and "sensors". Actors receive lazers and react in consequence while sensors react to the environment and produce lazers. 
 
 ### [Hexagon world generation](https://gibss.github.io/test/RAE-world-generation)
 
@@ -37,7 +45,7 @@ A web page that showcases a procedural generation library that creates top down 
 
 ### [Modified bush test](https://gibss.github.io/test/rbush)
 
-A test of a modified version of the [rbush library](https://github.com/mourner/rbush). My version very simply adds element movement.
+A test of a modified version of the [rbush library](https://github.com/mourner/rbush). My version very simply adds movements of the rectangles.
 
 ### [Rect collider test](https://gibss.github.io/test/rectCollider/)
 
