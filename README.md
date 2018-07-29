@@ -15,6 +15,10 @@ Before actually running the simulation, human ant farm allows the user to play a
 
 ## Experiments
 
+### [Grapple demo](https://gibss.github.io/test/grapple-world/index.html)
+
+A prototype for the first level of a super meat boy, celeste, vvvvv like 2d platformer. The player moves through space using a grappling hook.
+
 ### [Gridlike testbed](https://gibss.github.io/test/gridlike)
 
 A simple web page that showcases my physics engine: gridlike. Its a typescript library with a focus on being very simple to bootstrap and use to make web 2D platformers and terraria-likes.
