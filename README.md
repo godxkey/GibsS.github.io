@@ -1,19 +1,29 @@
 # GibsS.github.io
-my js experiments + whatever
-
-## Human Ant Farm
-
-My current project.
-
-Human Ant Farm is a simulation game where the player can create a 2d world in which he can observe humans moving around, surviving, creating buildings and making social bonds.
-
-The project is quite a big undertaking so I decided to split it in a few sub-projets.
-
-### [World generation](https://gibss.github.io/test/hat/world-gen)
-
-Before actually running the simulation, human ant farm allows the user to play around with different world generation algorithms to find the world the player wants to see. In this sub-project I implement both the different world generation algorithms of the game and the liquid logic.
+My js and Unity experiments + whatever
 
 ## Experiments
+
+### Human Ant Farm
+
+Human Ant Farm (formerly HAT) was a simulation game I wanted to make where the player can create a 2d world in which he can observe humans moving around, surviving, creating buildings and making social bonds.
+
+The project was a bit too big of an undertaking so I only managed to develop a few parts of the project (world generation, liquid simulation, AI pathfinding in a 2D platformer..). You can find the world gen and the liquid simulation below.
+
+#### [World generation](https://gibss.github.io/test/hat/world-gen)
+
+Experimenting with procedural generation algorithm to generate the world and cellular automata to simulate liquids.
+
+#### [AI Tests](https://gibss.github.io/test/hat/ai)
+
+I developped a pathfinding algorithm for 2D platformer characters. The AI handles going to a given location, building/mining blocks using a 'blueprint' and shooting a weapon using information about the projectile (gravity, initial speed..).
+
+The link shows a series of test I made to avoid regression when improving the pathfinder. In each scenario, the character is given a simple task to achieve.
+
+#### [Prototype](https://gibss.github.io/test/hat/prototype)
+
+This is a simplified version of the prototype of the actual game I was working on. You can play around with giving orders to the humans and seeing them fulfill them.
+
+The end goal was to allow them to make their decisions and fulfill quite complicated problems like choosing the architecture for their villages, allocating property, making sure to eat etc.. I got so far as have them eat and sleep in caves but I realised it was a bit too ambitious/way too long to try and make a full game where AI can build entire villages by themselves.
 
 ### [Grapple demo](https://gibss.github.io/test/grapple-world/index.html)
 
