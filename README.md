@@ -70,9 +70,9 @@ The link shows a series of test I made to avoid regression when improving the pa
 
 ### [Prototype](https://gibss.github.io/test/hat/prototype)
 
-This is a simplified version of the prototype of the actual game I was working on. You can play around with giving orders to the humans and seeing them fulfill them.
+This is a simplified version of the prototype of the actual game I was working on. You can play around with giving orders to the humans and seeing them execute those tasks.
 
-The end goal was to allow them to make their decisions and fulfill quite complicated problems like choosing the architecture for their villages, allocating property, making sure to eat etc.. I got so far as have them eat and sleep in caves but I realised it was a bit too ambitious/way too long to try and make a full game where AI can build entire villages by themselves.
+The end goal was to allow them to make their decisions and solve quite complicated problems like choosing the architecture for their villages, distributing property, making sure to eat etc.. I got so far as have them eat and sleep in caves but I realised it was a bit too ambitious/way too long to try and make a full game where AI can build entire villages by themselves.
 
 --- 
 
