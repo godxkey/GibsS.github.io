@@ -6,6 +6,10 @@ My Unity and js experiments, games + whatever
 
 Lovely little one month/one week-end long prototype of games and game mechanics I wanted to explore.
 
+### [Vertical scape](https://gibss.github.io/test/vertical-scape/v0.3)
+
+A mix between a terraria like and a colony management game. Make sure to play it in fullscreen mode.
+
 ### [Goo ship](https://gibss.github.io/test/goo-ship/Prototype)
 
 FTL meets worms: The player controls a ship in a 2D-platformer environment and uses its different systems (weapons, augmentations..) to defeat every encounters. The worms bit is that both ships and the world is destructible just like worms.
