@@ -6,7 +6,7 @@ My Unity and js experiments, games + whatever
 
 Lovely little one month/one week-end long prototype of games or game mechanics I wanted to explore.
 
-### [Vertical scape](https://gibss.github.io/test/vertical-scape/v0.3)
+### [Vertical scape](https://gibss.github.io/test/vertical-scape/v0.4)
 
 A mix between a terraria like game and a colony management game. It's very light on content and mostly showcases a very simple core loop. Make sure to play it in fullscreen mode.
 
