@@ -24,7 +24,11 @@ A prototype for the first level of a super meat boy, celeste, vvvvv like 2d plat
 
 A prototype for a digital TCG. The players create their own fleet of space ships and fight in a simultaneous-turn-based game (player define their moves and reveal them to the other player at the same time).
 
-### [Cannon automaton - Laser prototype](https://gibss.github.io/test/cannon-automaton/lazer-prototype)
+### [Cannon automaton](https://gibss.github.io/test/cannon-automaton-2)
+
+Harvest resources to be able to purchase defenses and protect yourself from incoming waves of enemies. There is no tutorial so this might be a bit rough to learn but the jist of it is: place mining lasers to harvest resources, spend those resources to place more miners or more defenses. The enemies come from the right hand side of the screen. 
+
+### [Laser automaton](https://gibss.github.io/test/cannon-automaton/lazer-prototype)
 
 A mechanic i'd like to include in a game some day: A system that allows player's to create automatic contraptions using lasers in a 2D plane. This demo only showcases placing lasers and moving them around. An actual game using this mechanic would have "actors" and "sensors". Actors receive lasers and react in consequence while sensors react to the environment and produce lasers. 
 
