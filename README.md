@@ -26,7 +26,13 @@ A prototype for a digital TCG. The players create their own fleet of space ships
 
 ### [Cannon automaton](https://gibss.github.io/test/cannon-automaton-2)
 
-Harvest resources to be able to purchase defenses and protect yourself from incoming waves of enemies. There is no tutorial so this might be a bit rough to learn but the jist of it is: place mining lasers to harvest resources, spend those resources to place more miners or more defenses. The enemies come from the right hand side of the screen. 
+<img src="test/cannon-automaton-2/Images/cannon-automaton-III.PNG"/>
+<p float="left">
+  <img src="test/cannon-automaton-2/Images/cannon-automaton-I.PNG" width="425"/> 
+  <img src="test/cannon-automaton-2/Images/cannon-automaton-II.PNG" width="425"/>
+</p>
+
+Harvest resources to be able to purchase defenses and protect yourself from incoming waves of enemies. There is no tutorial so this might be a bit rough to learn but the jist of it is: place mining lasers to harvest resources, spend those resources to place more miners or more defenses. The enemies come from the right hand side of the screen.
 
 ### [Laser automaton](https://gibss.github.io/test/cannon-automaton/lazer-prototype)
 
