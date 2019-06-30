@@ -20,9 +20,9 @@ You will want to play this in fullscreen (just click the arrows in the bottom ri
 
 A prototype for the first level of a super meat boy, celeste, vvvvv like 2d platformer. The player moves through space using a grappling hook.
 
-### [Space battle v2](http://space-battle-v2.herokuapp.com/#/board)
+### [Arrows](https://gibss.github.io/test/arrows/index.html)
 
-A prototype for a digital TCG. The players create their own fleet of space ships and fight in a simultaneous-turn-based game (player define their moves and reveal them to the other player at the same time).
+Messing around with the concept for a 2D platformer focused around archery, destructible terrain and fighting large enemies.
 
 ### [Cannon automaton](https://gibss.github.io/test/cannon-automaton-2)
 
@@ -33,6 +33,10 @@ A prototype for a digital TCG. The players create their own fleet of space ships
 </p>
 
 Harvest resources to be able to purchase defenses and protect yourself from incoming waves of enemies. There is no tutorial so this might be a bit rough to learn but the jist of it is: place mining lasers to harvest resources, spend those resources to place more miners or more defenses. The enemies come from the right hand side of the screen.
+
+### [Space battle v2](http://space-battle-v2.herokuapp.com/#/board)
+
+A prototype for a digital TCG. The players create their own fleet of space ships and fight in a simultaneous-turn-based game (player define their moves and reveal them to the other player at the same time).
 
 ### [Laser automaton](https://gibss.github.io/test/cannon-automaton/lazer-prototype)
 
