@@ -2,9 +2,9 @@
 
 My Unity and js experiments, games + whatever
 
-# Game prototypes
+# Games and prototypes
 
-Lovely little one month/one week-end long prototype of games or game mechanics I wanted to explore.
+Lovely little one month/one week-end long project or game mechanics I wanted to explore.
 
 ### [Orders of the King](https://gibss.github.io/test/orders-of-the-king/v0.1)
 
