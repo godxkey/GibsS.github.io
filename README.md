@@ -11,6 +11,10 @@ Lovely little one month/one week-end long prototype of games or game mechanics I
 Single player and multi player game where you define a strategy for your medieval army to follow. 
 Your goals it to annex the most villages and earn the most coins.
 
+### [Glider boy](https://play.google.com/store/apps/details?id=com.company.shieldboy&hl=en_GB)
+
+A very (very) modest infinite runner (or glider).
+
 ### [Vertical scape](https://gibss.github.io/test/vertical-scape/v0.4)
 
 A mix between a terraria like game and a colony management game. It's very light on content and mostly showcases a very simple core loop. Make sure to play it in fullscreen mode.
