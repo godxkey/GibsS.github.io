@@ -2,6 +2,8 @@
 
 My projects: The commercial titles, personal projects and libraries I worked on.
 
+For more info on those, contact me at: emerick.gibson@hotmail.fr
+
 # Commercial Titles
 
 ### [Run An Empire](http://www.runanempire.com)
@@ -22,14 +24,14 @@ I have a great passion for creating engaging and innovative interactive experien
 
 ### [Orders of the King](https://gibss.github.io/test/orders-of-the-king/v0.1)
 
-<img src="art/darkness_draws_near_banner.jpg"/>
+<img src="art/order_of_the_king_banner.jpg"/>
 
 Multiplayer game where you define a strategy using [behaviour trees](https://www.gamasutra.com/blogs/ChrisSimpson/20140717/221339/Behavior_trees_for_AI_How_they_work.php) for your medieval army to follow.
 Your goal is to annex the most villages and earn the most coins from them.
 
 ### [Glider boy](https://play.google.com/store/apps/details?id=com.company.shieldboy)
 
-<img src="art/darkness_draws_near_banner.jpg"/>
+<img src="art/glider_boy_banner.jpg"/>
 
 A very modest infinite runner for mobile. My attempt at making an ultra casual mobile game.
 
@@ -49,7 +51,7 @@ Link to the ludum dare page: [Darkness Draws Near](https://ldjam.com/events/ludu
 
 ### [LD 45: In the Beginning](https://ldjam.com/events/ludum-dare/45/in-the-beginning-3)
 
-<img src="art/darkness_draws_near_banner.jpg"/>
+<img src="art/in_the_beginning_banner.jpg"/>
 
 Imposed theme: Start with Nothing
 
@@ -69,21 +71,21 @@ Games that didn't quite make it: Ideas I have explored but that I did not make i
 
 ### [Goo ship](https://gibss.github.io/test/goo-ship/Prototype)
 
-<img src="art/darkness_draws_near_banner.jpg"/>
+<img src="art/goo_ship_banner.jpg"/>
 
 FTL meets worms: The player controls a ship in a 2D-platformer environment and uses its different systems (weapons, augmentations..) to defeat enemy ships. The worms bit is that both ships and the world is destructible.
 
 Make sure to play in fullscreen mode.
 
-### [Grapple demo](https://gibss.github.io/test/grapple-world/index.html)
+### [Grapple](https://gibss.github.io/test/grapple-world/index.html)
 
-<img src="art/darkness_draws_near_banner.jpg"/>
+<img src="art/grapple_banner.jpg"/>
 
 A prototype for the first level of a super meat boy, celeste, vvvvv like 2d platformer. The player moves through space using a grappling hook.
 
 ### [Vertical scape](https://gibss.github.io/test/vertical-scape/v0.4)
 
-<img src="art/darkness_draws_near_banner.jpg"/>
+<img src="art/vertical_scape_banner.jpg"/>
 
 A mix between a terraria like game and a colony management game. It's very light on content and mostly showcases a very simple core loop.
 
@@ -95,13 +97,9 @@ Harvest resources to be able to purchase defenses and protect yourself from inco
 
 ### [Arrows](https://gibss.github.io/test/arrows/index.html)
 
-<img src="art/darkness_draws_near_banner.jpg"/>
-
 Messing around with the concept for a 2D platformer focused around archery, destructible terrain and fighting large enemies.
 
 ### [Space battle card game](http://space-battle-v2.herokuapp.com/#/board)
-
-<img src="art/darkness_draws_near_banner.jpg"/>
 
 A prototype for a digital card game. The players create their own fleets of space ships and fight in a simultaneous-turn-based game (player define their moves and reveal them to the other player at the same time).
 
