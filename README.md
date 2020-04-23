@@ -2,7 +2,7 @@
 
 My projects: The commercial titles, personal projects and libraries I worked on.
 
-For more info on those, contact me at: emerick.gibson@hotmail.fr
+For more info on those, contact me at: [emerick.gibson@hotmail.fr](mailto:emerick.gibson@hotmail.fr)
 
 # Commercial Titles
 
