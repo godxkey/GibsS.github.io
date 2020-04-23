@@ -105,6 +105,10 @@ A prototype for a digital card game. The players create their own fleets of spac
 
 # Libraries
 
+### [Unity Mask Lighting](https://github.com/GibsS/unity-mask-lighting)
+
+A library to reproduce a specific type of lighting in 2D games.
+
 ### [Unity Behaviour Tree](https://github.com/GibsS/unity-behaviour-tree)
 
 There is probably a plethora of behaviour tree libraries for Unity but most of them focused on making it "designer" friendly and UI driven. I wanted to make one that was extremely easy to integrate in code so as to use the full flexibility of code. So I made this library. One of it's main feature is the use of C# IEnumerables to allow developers to write dynamic behaviour tree nodes and have a lot of control without having to create over complicated trees with hundreds of nodes.
