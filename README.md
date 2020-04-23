@@ -1,6 +1,6 @@
-# GibsS.github.io
+# Portfolio
 
-My projects: The commercial titles, personal projects and libraries I worked on
+My projects: The commercial titles, personal projects and libraries I worked on.
 
 # Commercial Titles
 
@@ -55,8 +55,10 @@ Imposed theme: Start with Nothing
 
 The player creates a world starting with nothing.
 
-Overall: 18th/5838 
+Overall: 18th/5838
+
 Innovation: 47th/5838 
+
 Theme: 7th/5838
 
 Link to the ludum dare page: [In the Beginning](https://ldjam.com/events/ludum-dare/45/in-the-beginning-3)
@@ -115,7 +117,7 @@ When looking at javascript 2D physics engines for HTML5 games, I felt like it wa
 
 So I made Gridlike: A typescript physics engine (compiled to javascript) designed for creating 2d voxel games and designed to make character implementation extremely quick.
 
-[testbed]((https://gibss.github.io/test/gridlike)
+[testbed](https://gibss.github.io/test/gridlike)
 
 [github page](https://github.com/GibsS/gridlike)
 
