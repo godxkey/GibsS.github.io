@@ -1,110 +1,126 @@
 # GibsS.github.io
 
-My Unity and js experiments, games + whatever
+My projects: The commercial titles, personal projects and libraries I worked on
 
-# Games and prototypes
+# Commercial Titles
 
-Lovely little one month/one week-end long project or game mechanics I wanted to explore.
+### [Run An Empire](http://www.runanempire.com)
+
+<img src="art/run_an_empire_banner.jpg"/>
+
+A free to play game where players go out in the real world to capture "hexes" (hexagonal tiles) so they can build an empire on them. Similar to games like Sim City BuildIt, the player places buildings to generate resources which are sold for coins and experience, allowing them to progress through the levels and the eras.
+
+I have lead development on the game from its inception and helped maintain it for it's entire lifetime.
+
+Google Play page: [Run An Empire for Android](https://play.google.com/store/apps/details?id=com.lgl.runanempire)
+
+App Store page: [Run An Empire for iOS](https://apps.apple.com/gb/app/run-an-empire/id1073986257)
+
+# Completed personal projects
+
+I have a great passion for creating engaging and innovative interactive experiences. Here are the personal games I brought to completion.
 
 ### [Orders of the King](https://gibss.github.io/test/orders-of-the-king/v0.1)
 
-Single player and multi player game where you define a strategy for your medieval army to follow. 
-Your goals it to annex the most villages and earn the most coins.
+<img src="art/darkness_draws_near_banner.jpg"/>
 
-### [Glider boy](https://play.google.com/store/apps/details?id=com.company.shieldboy&hl=en_GB)
+Multiplayer game where you define a strategy using [behaviour trees](https://www.gamasutra.com/blogs/ChrisSimpson/20140717/221339/Behavior_trees_for_AI_How_they_work.php) for your medieval army to follow.
+Your goal is to annex the most villages and earn the most coins from them.
 
-A very (very) modest infinite runner (or glider).
+### [Glider boy](https://play.google.com/store/apps/details?id=com.company.shieldboy)
 
-### [Vertical scape](https://gibss.github.io/test/vertical-scape/v0.4)
+<img src="art/darkness_draws_near_banner.jpg"/>
 
-A mix between a terraria like game and a colony management game. It's very light on content and mostly showcases a very simple core loop. Make sure to play it in fullscreen mode.
+A very modest infinite runner for mobile. My attempt at making an ultra casual mobile game.
+
+# Ludum Dare submissions
+
+I started regularly participating in the Ludum Dare competition: a global game jam where participants try to create a game in 3 days, the theme is picked by the community.
+
+### [LD 46: Darkness Draws Near](https://ldjam.com/events/ludum-dare/46/darkness-draws-near)
+
+<img src="art/darkness_draws_near_banner.jpg"/>
+
+Imposed theme: Keep it Alive
+
+The player must survive the night in some cursed woods. To do that they must use their wood to both maintain a fire and to carve out arrows to fight off enemies.
+
+Link to the ludum dare page: [Darkness Draws Near](https://ldjam.com/events/ludum-dare/46/darkness-draws-near)
+
+### [LD 45: In the Beginning](https://ldjam.com/events/ludum-dare/45/in-the-beginning-3)
+
+<img src="art/darkness_draws_near_banner.jpg"/>
+
+Imposed theme: Start with Nothing
+
+The player creates a world starting with nothing.
+
+Overall: 18th/5838 
+Innovation: 47th/5838 
+Theme: 7th/5838
+
+Link to the ludum dare page: [In the Beginning](https://ldjam.com/events/ludum-dare/45/in-the-beginning-3)
+
+# Prototypes
+
+Games that didn't quite make it: Ideas I have explored but that I did not make into fully featured games. They are still fully playable without any prior knowledge.
 
 ### [Goo ship](https://gibss.github.io/test/goo-ship/Prototype)
 
-FTL meets worms: The player controls a ship in a 2D-platformer environment and uses its different systems (weapons, augmentations..) to defeat hi enemies. The worms bit is that both ships and the world is destructible just like worms.
+<img src="art/darkness_draws_near_banner.jpg"/>
 
-You will want to play this in fullscreen (just click the arrows in the bottom right).
+FTL meets worms: The player controls a ship in a 2D-platformer environment and uses its different systems (weapons, augmentations..) to defeat enemy ships. The worms bit is that both ships and the world is destructible.
+
+Make sure to play in fullscreen mode.
 
 ### [Grapple demo](https://gibss.github.io/test/grapple-world/index.html)
 
+<img src="art/darkness_draws_near_banner.jpg"/>
+
 A prototype for the first level of a super meat boy, celeste, vvvvv like 2d platformer. The player moves through space using a grappling hook.
 
-### [Arrows](https://gibss.github.io/test/arrows/index.html)
+### [Vertical scape](https://gibss.github.io/test/vertical-scape/v0.4)
 
-Messing around with the concept for a 2D platformer focused around archery, destructible terrain and fighting large enemies.
+<img src="art/darkness_draws_near_banner.jpg"/>
+
+A mix between a terraria like game and a colony management game. It's very light on content and mostly showcases a very simple core loop.
 
 ### [Cannon automaton](https://gibss.github.io/test/cannon-automaton-2)
 
 <img src="test/cannon-automaton-2/Images/cannon-automaton-III.PNG"/>
-<p float="left">
-  <img src="test/cannon-automaton-2/Images/cannon-automaton-I.PNG" width="425"/> 
-  <img src="test/cannon-automaton-2/Images/cannon-automaton-II.PNG" width="425"/>
-</p>
 
 Harvest resources to be able to purchase defenses and protect yourself from incoming waves of enemies. There is no tutorial so this might be a bit rough to learn but the jist of it is: place mining lasers to harvest resources, spend those resources to place more miners or more defenses. The enemies come from the right hand side of the screen.
 
-### [Space battle v2](http://space-battle-v2.herokuapp.com/#/board)
+### [Arrows](https://gibss.github.io/test/arrows/index.html)
 
-A prototype for a digital TCG. The players create their own fleet of space ships and fight in a simultaneous-turn-based game (player define their moves and reveal them to the other player at the same time).
+<img src="art/darkness_draws_near_banner.jpg"/>
 
-### [Laser automaton](https://gibss.github.io/test/cannon-automaton/lazer-prototype)
+Messing around with the concept for a 2D platformer focused around archery, destructible terrain and fighting large enemies.
 
-A mechanic i'd like to include in a game some day: A system that allows player's to create automatic contraptions using lasers in a 2D plane. This demo only showcases placing lasers and moving them around. An actual game using this mechanic would have "actors" and "sensors". Actors receive lasers and react in consequence while sensors react to the environment and produce lasers. 
+### [Space battle card game](http://space-battle-v2.herokuapp.com/#/board)
 
----
+<img src="art/darkness_draws_near_banner.jpg"/>
 
-# Gridlike
+A prototype for a digital card game. The players create their own fleets of space ships and fight in a simultaneous-turn-based game (player define their moves and reveal them to the other player at the same time).
 
-When looking at javascript 2D physics engines, I felt like it was always painful to have some wrapper code around the physics library in order to do very simple things like create a controlable character, have him stay still on moving platforms..
+# Libraries
 
-So I made Gridlike: A physics engine designed for creating 2d voxel games and designed to make character implementation extremely quick.
+### [Unity Behaviour Tree](https://github.com/GibsS/unity-behaviour-tree)
 
-### [Gridlike testbed](https://gibss.github.io/test/gridlike)
+There is probably a plethora of behaviour tree libraries for Unity but most of them focused on making it "designer" friendly and UI driven. I wanted to make one that was extremely easy to integrate in code so as to use the full flexibility of code. So I made this library. One of it's main feature is the use of C# IEnumerables to allow developers to write dynamic behaviour tree nodes and have a lot of control without having to create over complicated trees with hundreds of nodes.
 
-This is the web version of gridlike, coded in typescript (compiled to js).
+### [Gridlike](https://www.npmjs.com/package/grid-like)
 
-Checkout the different scripts and follow the instructions, you'll quickly get a sense of the scope of the library.
+When looking at javascript 2D physics engines for HTML5 games, I felt like it was always painful to have some wrapper code around the physics library in order to do very simple things like create a controlable character, have him stay still on moving platforms..
+
+So I made Gridlike: A typescript physics engine (compiled to javascript) designed for creating 2d voxel games and designed to make character implementation extremely quick.
+
+[testbed]((https://gibss.github.io/test/gridlike)
 
 [github page](https://github.com/GibsS/gridlike)
 
 [npm page](https://www.npmjs.com/package/grid-like)
 
-### [Gridlike-Unity demo](https://gibss.github.io/test/gridlike-unity/Gridship3/)
+### [Pan And Zoom](https://github.com/GibsS/unity-pan-and-zoom)
 
-A demo of the unity version of gridlike. There is a small (see tiny) amount of gameplay but this showcases a few of the things you can do with gridlike.
-
-Just like its typescript counterpart above, the library serves as foundation to make terraria likes, 2D platformers with a focus on destructible (and buildable) tile based terrain.
-
-[github page](https://github.com/GibsS/gridlike-Unity)
-
----
-
-# Human Ant Farm
-
-Human Ant Farm was a simulation game I wanted to make where the player can create a 2d world in which he can observe humans moving around, surviving, creating buildings and making social bonds.
-
-The project was a bit too big of an undertaking so I only managed to develop a few parts of the project (world generation, liquid simulation, AI pathfinding for a 2D platformer..). You can find the world gen, the AI and the liquid simulation below.
-
-### [AI Tests](https://gibss.github.io/test/hat/ai)
-
-I developed a pathfinding algorithm for 2D platformer characters. The AI handles going to a given location, building/mining blocks using a 'blueprint' and shooting a weapon using information about the projectile (gravity, initial speed..).
-
-The link shows a series of test I made to avoid regression when improving the pathfinder. In each scenario, the character is given a simple task to achieve.
-
-### [Prototype](https://gibss.github.io/test/hat/prototype)
-
-This is a simplified version of the prototype of the actual game I was working on. You can play around with giving orders to the humans and seeing them execute those tasks.
-
-The end goal was to allow them to make their decisions and solve quite complicated problems like choosing the architecture for their villages, distributing property, making sure to eat etc.. I got so far as have them eat and sleep in caves but I realised it was a bit too ambitious/way too long to try and make a full game where AI can build entire villages by themselves.
-
---- 
-
-# Experiments
-
-### [Hexagon world generation](https://gibss.github.io/test/RAE-world-generation)
-
-A web page that showcases a procedural generation library that creates top down hex world maps.
-
-### [Modified bush test](https://gibss.github.io/test/rbush)
-
-A test of a modified version of the [rbush library](https://github.com/mourner/rbush), used for spatial partitionning. My version very simply adds movements of the rectangles.
+A simple Unity script to implement 2D camera control for mobile games and desktop alike. 
