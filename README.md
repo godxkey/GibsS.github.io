@@ -26,8 +26,8 @@ I have a great passion for creating engaging and innovative interactive experien
 
 <img src="art/order_of_the_king_banner.jpg"/>
 
-Multiplayer game where you define a strategy using [behaviour trees](https://www.gamasutra.com/blogs/ChrisSimpson/20140717/221339/Behavior_trees_for_AI_How_they_work.php) for your medieval army to follow.
-Your goal is to annex the most villages and earn the most coins from them.
+Online multiplayer game (can be played alone) where the player defines a strategy using [behaviour trees](https://www.gamasutra.com/blogs/ChrisSimpson/20140717/221339/Behavior_trees_for_AI_How_they_work.php) for your medieval army to follow.
+Your goal is to annex the most villages and levy the most taxes off of them.
 
 ### [Glider boy](https://play.google.com/store/apps/details?id=com.company.shieldboy)
 
@@ -68,6 +68,12 @@ Link to the ludum dare page: [In the Beginning](https://ldjam.com/events/ludum-d
 # Prototypes
 
 Games that didn't quite make it: Ideas I have explored but that I did not make into fully featured games. They are still fully playable without any prior knowledge.
+
+### [Horizon Army](https://gibss.github.io/test/landmark-project/v0.5/index.html)
+
+<img src="art/horizon_army_banner.jpg"/>
+
+Digital card game of sorts where the player collects medieval fantasy soldiers. With those soldiers they try to create the most optimal army to compete online against other players' armies. It is almost finished, the main missing piece as you can see is the art. Although it is hard to make out, it is fully playable and there is a short tutorial to onboard the player on how to make armies.
 
 ### [Goo ship](https://gibss.github.io/test/goo-ship/Prototype)
 
