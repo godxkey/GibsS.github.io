@@ -65,9 +65,9 @@ Theme: 7th/5838
 
 Link to the ludum dare page: [In the Beginning](https://ldjam.com/events/ludum-dare/45/in-the-beginning-3)
 
-# Playable prtotypes
+# Playable prototypes
 
-Fully playable prototypes, usually just missing art and UI/UX polish.
+Fully playable self-contained prototypes, usually just missing art and UI/UX polish.
 
 ### [Minute Miner](https://gibss.github.io/test/minute-miner/v0.2/index.html)
 
