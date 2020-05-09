@@ -65,9 +65,15 @@ Theme: 7th/5838
 
 Link to the ludum dare page: [In the Beginning](https://ldjam.com/events/ludum-dare/45/in-the-beginning-3)
 
-# Prototypes
+# Playable prtotypes
 
-Games that didn't quite make it: Ideas I have explored but that I did not make into fully featured games. They are still fully playable without any prior knowledge.
+Fully playable prototypes, usually just missing art and UI/UX polish.
+
+### [Minute Miner](https://gibss.github.io/test/minute-miner/v0.2/index.html)
+
+<img src="art/minute_miner_banner.jpg"/>
+
+The player must last 20 minutes by harvesting minerals and buying defenses in an ever growing mine. 
 
 ### [Horizon Army](https://gibss.github.io/test/landmark-project/v0.5/index.html)
 
