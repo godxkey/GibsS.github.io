@@ -18,9 +18,39 @@ Google Play page: [Run An Empire for Android](https://play.google.com/store/apps
 
 App Store page: [Run An Empire for iOS](https://apps.apple.com/gb/app/run-an-empire/id1073986257)
 
+### [Stride](https://apps.apple.com/ca/app/stride-run-hike-walk/id1526274172)
+
+<img src="art/stride_banner.png"/>
+
+A second take on the core concept of territory capturing, reusing a lot of the logic from Run An Empire but targetting a more running focused audience. To do so, the app is mechanically much simpler and borrows more from traditional fitness apps than mobile games. 
+
+It monetizes using subscriptions rather than Run An Empire's free to play model. This monetization strategy has had a pretty mixed reception from users but the overall game is a mechanical and technical improvement on Run An Empire.
+
+App Store page: [Stride for iOS](https://apps.apple.com/ca/app/stride-run-hike-walk/id1526274172)
+
 # Completed personal projects
 
 I have a great passion for creating engaging and innovative interactive experiences. Here are the personal games I brought to completion.
+
+### Drift maker
+
+<img src="art/drift_maker_banner.png"/>
+
+Mobile game where the player controls a car and must complete a set of increasingly hard tracks. 
+
+The game also has an online component that allows players to create there own tracks or player those of others.
+
+### [Postman Tap](https://postmantap.com/)
+
+<img src="art/postman_tap_banner.jpg"/>
+
+Building on a game I mention further down, the player controls a postman tap on a mission to deliver mail in a small airborne village. To achieve this task, the player must master the use of their glider.
+
+A simple casual mobile game with a light meta progression.
+
+Google Play page: [Run An Empire for Android](https://play.google.com/store/apps/details?id=com.game.glider.postman)
+
+App Store page: [Run An Empire for iOS](https://apps.apple.com/us/app/postman-tap/id1516236231)
 
 ### [Orders of the King](https://gibss.github.io/test/orders-of-the-king/v0.1)
 
