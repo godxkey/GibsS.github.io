@@ -32,7 +32,7 @@ App Store page: [Stride for iOS](https://apps.apple.com/ca/app/stride-run-hike-w
 
 I have a great passion for creating engaging and innovative interactive experiences. Here are the personal games I brought to completion.
 
-### Drift maker
+### [Drift maker](https://play.google.com/store/apps/details?id=com.DriftMakerInc.DriftMaker)
 
 <img src="art/drift_maker_banner.png"/>
 
