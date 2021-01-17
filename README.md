@@ -14,9 +14,9 @@ A free to play game where players go out in the real world to capture "hexes" (h
 
 I have lead development on the game from its inception and helped maintain it for it's entire lifetime.
 
-Google Play page: [Run An Empire for Android](https://play.google.com/store/apps/details?id=com.lgl.runanempire)
-
 App Store page: [Run An Empire for iOS](https://apps.apple.com/gb/app/run-an-empire/id1073986257)
+
+Google Play page: [Run An Empire for Android](https://play.google.com/store/apps/details?id=com.lgl.runanempire)
 
 ### [Stride](https://apps.apple.com/ca/app/stride-run-hike-walk/id1526274172)
 
@@ -27,7 +27,8 @@ A second take on the core concept of territory capturing, reusing a lot of the l
 It monetizes using subscriptions rather than Run An Empire's free to play model. This monetization strategy has had a pretty mixed reception from users but the overall game is a mechanical and technical improvement on Run An Empire.
 
 App Store page: [Stride for iOS](https://apps.apple.com/ca/app/stride-run-hike-walk/id1526274172)
-Google Play Store page: [Stride for Android](https://play.google.com/store/apps/details?id=com.lgl.stride)
+
+Google Play page: [Stride for Android](https://play.google.com/store/apps/details?id=com.lgl.stride)
 
 # Completed personal projects
 
