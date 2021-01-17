@@ -27,6 +27,7 @@ A second take on the core concept of territory capturing, reusing a lot of the l
 It monetizes using subscriptions rather than Run An Empire's free to play model. This monetization strategy has had a pretty mixed reception from users but the overall game is a mechanical and technical improvement on Run An Empire.
 
 App Store page: [Stride for iOS](https://apps.apple.com/ca/app/stride-run-hike-walk/id1526274172)
+Google Play Store page: [Stride for Android](https://play.google.com/store/apps/details?id=com.lgl.stride)
 
 # Completed personal projects
 
