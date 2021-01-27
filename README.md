@@ -46,13 +46,13 @@ The game also has an online component that allows players to create there own tr
 
 <img src="art/postman_tap_banner.jpg"/>
 
-Building on a game I mention further down, the player controls a postman tap on a mission to deliver mail in a small airborne village. To achieve this task, the player must master the use of their glider.
+Building on a game I mention further down, the player controls a postman on a mission to deliver mail in a small airborne village. To achieve this task, the player must master the use of their glider.
 
 A simple casual mobile game with a light meta progression.
 
-Google Play page: [Run An Empire for Android](https://play.google.com/store/apps/details?id=com.game.glider.postman)
+Google Play page: [Postman Tap for Android](https://play.google.com/store/apps/details?id=com.game.glider.postman)
 
-App Store page: [Run An Empire for iOS](https://apps.apple.com/us/app/postman-tap/id1516236231)
+App Store page: [Postman Tap for iOS](https://apps.apple.com/us/app/postman-tap/id1516236231)
 
 ### [Orders of the King](https://gibss.github.io/test/orders-of-the-king/v0.1)
 
@@ -155,7 +155,7 @@ A library to reproduce a specific type of lighting in 2D games.
 
 ### [Unity Behaviour Tree](https://github.com/GibsS/unity-behaviour-tree)
 
-There is probably a plethora of behaviour tree libraries for Unity but most of them focused on making it "designer" friendly and UI driven. I wanted to make one that was extremely easy to integrate in code so as to use the full flexibility of code. So I made this library. One of it's main feature is the use of C# IEnumerables to allow developers to write dynamic behaviour tree nodes and have a lot of control without having to create over complicated trees with hundreds of nodes.
+There is probably a plethora of behaviour tree libraries for Unity but most of them focus on making it "designer" friendly and UI driven. I wanted to make a library that gave programmers a simple framework to create complex AI behaviours through behaviour trees. So I made this library. One of it's main feature is the use of C# IEnumerables to allow developers to write dynamic behaviour tree nodes and have a lot of control without having to create over complicated trees with hundreds of nodes.
 
 ### [Gridlike](https://www.npmjs.com/package/grid-like)
 
