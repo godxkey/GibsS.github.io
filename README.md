@@ -90,6 +90,20 @@ A very modest infinite runner for mobile. My attempt at making an ultra casual m
 
 I started regularly participating in the Ludum Dare competition: a global game jam where participants try to create a game in 3 days, the theme is picked by the community.
 
+### [LD 47: Once More](https://ldjam.com/events/ludum-dare/47/once-more-dear-friends)
+
+<img src="art/once_more_banner.PNG"/>
+
+Imposed theme: Stuck in a Loop
+
+2D Shoot them up with a twist. The player must just survive 55 seconds. How hard can it be?
+
+Overall: 138th/3206
+
+Fun: 44th/3206
+
+Ludum dare page: [Once More](https://ldjam.com/events/ludum-dare/47/once-more-dear-friends)
+
 ### [LD 46: Darkness Draws Near](https://ldjam.com/events/ludum-dare/46/darkness-draws-near)
 
 <img src="art/darkness_draws_near_banner.jpg"/>
@@ -98,7 +112,7 @@ Imposed theme: Keep it Alive
 
 The player must survive the night in some cursed woods. To do that they must use their wood to both maintain a fire and to carve out arrows to fight off enemies.
 
-Link to the ludum dare page: [Darkness Draws Near](https://ldjam.com/events/ludum-dare/46/darkness-draws-near)
+Ludum dare page: [Darkness Draws Near](https://ldjam.com/events/ludum-dare/46/darkness-draws-near)
 
 ### [LD 45: In the Beginning](https://ldjam.com/events/ludum-dare/45/in-the-beginning-3)
 
@@ -114,7 +128,7 @@ Innovation: 47th/5838
 
 Theme: 7th/5838
 
-Link to the ludum dare page: [In the Beginning](https://ldjam.com/events/ludum-dare/45/in-the-beginning-3)
+Ludum dare page: [In the Beginning](https://ldjam.com/events/ludum-dare/45/in-the-beginning-3)
 
 # Playable prototypes
 
