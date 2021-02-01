@@ -34,13 +34,32 @@ Google Play page: [Stride for Android](https://play.google.com/store/apps/detail
 
 I have a great passion for creating engaging and innovative interactive experiences. Here are the personal games I brought to completion.
 
-### [Drift maker](https://play.google.com/store/apps/details?id=com.DriftMakerInc.DriftMaker)
+### [City Maker](https://gibss.github.io/test/city-maker/v1.0.1/index.html)
+
+<img src="art/city_maker_banner.PNG"/>
+
+A mix between a city building game and a casual puzzle game. The player builds a city but the catch is that they can only pick from 3 possible buildings at any given time. They have to learn to both make sure that the cities organization fulfils the needs of its citizens and that the infrastructure cost don't exceed the revenue.
+
+Release date: March 1st 2021
+
+Google Play Store page: Coming soon
+
+App Store page: Coming soon
+
+Steam page: Coming soon
+
+A free web version is accessible [here](https://gibss.github.io/test/city-maker/v1.0.1/index.html)
+Building a city is very quick (~5 min). You'll want to make sure to play in fullscreen.
+
+### [Drift Maker](https://play.google.com/store/apps/details?id=com.DriftMakerInc.DriftMaker)
 
 <img src="art/drift_maker_banner.png"/>
 
 Mobile game where the player controls a car and must complete a set of increasingly hard tracks. 
 
 The game also has an online component that allows players to create there own tracks or player those of others.
+
+Google Play Store page: [Drift Maker for Android](https://play.google.com/store/apps/details?id=com.DriftMakerInc.DriftMaker)
 
 ### [Postman Tap](https://postmantap.com/)
 
@@ -50,7 +69,7 @@ Building on a game I mention further down, the player controls a postman on a mi
 
 A simple casual mobile game with a light meta progression.
 
-Google Play page: [Postman Tap for Android](https://play.google.com/store/apps/details?id=com.game.glider.postman)
+Google Play Store page: [Postman Tap for Android](https://play.google.com/store/apps/details?id=com.game.glider.postman)
 
 App Store page: [Postman Tap for iOS](https://apps.apple.com/us/app/postman-tap/id1516236231)
 
@@ -142,10 +161,6 @@ Harvest resources to be able to purchase defenses and protect yourself from inco
 ### [Arrows](https://gibss.github.io/test/arrows/index.html)
 
 Messing around with the concept for a 2D platformer focused around archery, destructible terrain and fighting large enemies.
-
-### [Space battle card game](http://space-battle-v2.herokuapp.com/#/board)
-
-A prototype for a digital card game. The players create their own fleets of space ships and fight in a simultaneous-turn-based game (player define their moves and reveal them to the other player at the same time).
 
 # Libraries
 
