@@ -42,11 +42,11 @@ A mix between a city building game and a casual puzzle game. The player builds a
 
 Release date: March 1st 2021
 
+Steam page: [City Maker for Windows](https://store.steampowered.com/app/1540910/City_Maker)
+
 Google Play Store page: Coming soon
 
 App Store page: Coming soon
-
-Steam page: Coming soon
 
 A free web version is accessible [here](https://gibss.github.io/test/city-maker/v1.0.1/index.html)
 Building a city is very quick (~5 min). You'll want to make sure to play in fullscreen.
