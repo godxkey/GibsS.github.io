@@ -34,7 +34,7 @@ Google Play page: [Stride for Android](https://play.google.com/store/apps/detail
 
 I have a great passion for creating engaging and innovative interactive experiences. Here are the personal games I brought to completion.
 
-### [City Maker](https://gibss.github.io/test/city-maker/v1.0.1/index.html)
+### [City Maker](https://store.steampowered.com/app/1540910/City_Maker/)
 
 <img src="art/city_maker_banner.PNG"/>
 
