@@ -28,7 +28,7 @@ Google Play page: [Stride for Android](https://play.google.com/store/apps/detail
 
 ### [Crate Mates](https://store.steampowered.com/app/1750600/Crate_Mates/)
 
-<img src="art/crate_mates.PNG"/>
+<img src="art/crate_mates_banner.PNG"/>
 
 Crate Mates is a puzzle game where the player controls "mates" to store "crates". It's a original take on a very old puzzle game formula.
 
@@ -97,7 +97,7 @@ I started regularly participating in the Ludum Dare competition: a global game j
 
 ### [LD 49: Lab Panic!](https://ldjam.com/events/ludum-dare/49/lab-panic)
 
-<img src="art/lab_panic.PNG"/>
+<img src="art/lab_panic_banner.PNG"/>
 
 Imposed theme: Unstable
 
@@ -107,7 +107,7 @@ Ludum dare page: [Lab Panic!](https://ldjam.com/events/ludum-dare/49/lab-panic)
 
 ### [LD 48: Asteroid Breaker](https://ldjam.com/events/ludum-dare/48/asteroid-breaker)
 
-<img src="art/asteroid_breaker.PNG"/>
+<img src="art/asteroid_breaker_banner.PNG"/>
 
 Imposed theme: Deeper and deeper
 
