@@ -24,13 +24,13 @@ App Store page: [Stride for iOS](https://apps.apple.com/ca/app/stride-run-hike-w
 
 Google Play page: [Stride for Android](https://play.google.com/store/apps/details?id=com.lgl.stride)
 
-# Completed personal projects
+# Personal Projects
 
 ### [Crate Mates](https://store.steampowered.com/app/1750600/Crate_Mates/)
 
 <img src="art/crate_mates_banner.PNG"/>
 
-Crate Mates is a puzzle game where the player controls "mates" to store "crates". It's a original take on a very old puzzle game formula.
+Crate Mates is a puzzle game where the player controls "mates" to store "crates". It's an original take on a very old puzzle game formula.
 
 Steam page: [Crate Mates for Windows and Linux](https://store.steampowered.com/app/1750600/Crate_Mates/)
 
