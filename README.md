@@ -2,17 +2,13 @@
 
 My projects: The commercial titles, personal projects and libraries I worked on.
 
-For more info on those, contact me at: [emerick.gibson@hotmail.fr](mailto:emerick.gibson@hotmail.fr)
-
 # Commercial Titles
 
 ### [Run An Empire](http://www.runanempire.com)
 
 <img src="art/run_an_empire_banner.jpg"/>
 
-A free to play game where players go out in the real world to capture "hexes" (hexagonal tiles) so they can build an empire on them. Similar to games like Sim City BuildIt, the player places buildings to generate resources which are sold for coins and experience, allowing them to progress through the levels and the eras.
-
-I have lead development on the game from its inception and helped maintain it for it's entire lifetime.
+Run An Empire is a free to play mobile game where players capture territory by walking in the real world and build an empire on the acquired land. The ultimate goal for the player is too take care of their people and guide them through the eras.
 
 App Store page: [Run An Empire for iOS](https://apps.apple.com/gb/app/run-an-empire/id1073986257)
 
@@ -22,9 +18,7 @@ Google Play page: [Run An Empire for Android](https://play.google.com/store/apps
 
 <img src="art/stride_banner.png"/>
 
-A second take on the core concept of territory capturing, reusing a lot of the logic from Run An Empire but targetting a more running focused audience. To do so, the app is mechanically much simpler and borrows more from traditional fitness apps than mobile games. 
-
-It monetizes using subscriptions rather than Run An Empire's free to play model. This monetization strategy has had a pretty mixed reception from users but the overall game is a mechanical and technical improvement on Run An Empire.
+A second take on the core concept of territory capture, Stride is a fitness app where you compete with everyone else for the most territory. You go for runs or walks to encircle and capture land. The app also provides stats about your fitness performance.
 
 App Store page: [Stride for iOS](https://apps.apple.com/ca/app/stride-run-hike-walk/id1526274172)
 
@@ -32,24 +26,25 @@ Google Play page: [Stride for Android](https://play.google.com/store/apps/detail
 
 # Completed personal projects
 
-I have a great passion for creating engaging and innovative interactive experiences. Here are the personal games I brought to completion.
+### [Crate Mates](https://store.steampowered.com/app/1750600/Crate_Mates/)
+
+<img src="art/crate_mates.PNG"/>
+
+Crate Mates is a puzzle game where the player controls "mates" to store "crates". It's a original take on a very old puzzle game formula.
+
+Steam page: [Crate Mates for Windows and Linux](https://store.steampowered.com/app/1750600/Crate_Mates/)
+
+Google Play page: [Crate Mates for Android](https://play.google.com/store/apps/details?id=com.gibson.puzzle.game.sokoban.cratematesinc)
 
 ### [City Maker](https://store.steampowered.com/app/1540910/City_Maker/)
 
 <img src="art/city_maker_banner.PNG"/>
 
-A mix between a city building game and a casual puzzle game. The player builds a city but the catch is that they can only pick from 3 possible buildings at any given time. They have to learn to both make sure that the cities organization fulfils the needs of its citizens and that the infrastructure cost don't exceed the revenue.
-
-Release date: March 1st 2021
+A mix between a city building game and a casual puzzle game. The player builds a city but the catch is that they can only pick from 3 possible buildings at any given time. They have to learn to both make sure that the cities organization fulfils the needs of its citizens and that the infrastructure cost don't exceed the city's revenue.
 
 Steam page: [City Maker for Windows](https://store.steampowered.com/app/1540910/City_Maker)
 
 Google Play page: [City Maker for Android](https://play.google.com/store/apps/details?id=com.Gibson.CityMaker)
-
-App Store page: Coming soon
-
-A free web version is accessible [here](https://gibss.github.io/test/city-maker/v1.0.1/index.html)
-Building a city is very quick (~5 min). You'll want to make sure to play in fullscreen.
 
 ### [Drift Maker](https://play.google.com/store/apps/details?id=com.DriftMakerInc.DriftMaker)
 
@@ -61,11 +56,11 @@ The game also has an online component that allows players to create there own tr
 
 Google Play Store page: [Drift Maker for Android](https://play.google.com/store/apps/details?id=com.DriftMakerInc.DriftMaker)
 
-## [The Climb](https://gibss.itch.io/the-climb)
+### [The Climb](https://gibss.itch.io/the-climb)
 
 <img src="art/the_climb_banner.png"/>
 
-A desktop and mobile game where you indirectly control your units to the top of the mountain before the flood gets them.
+The player guides a herd of cat to the top of the mountain before the flood gets them.
 
 Itch.io page: [The Climb for Windows](https://gibss.itch.io/the-climb)
 
@@ -75,9 +70,9 @@ Google Play page: [The Climb for Android](https://play.google.com/store/apps/det
 
 <img src="art/postman_tap_banner.jpg"/>
 
-Building on a game I mention further down, the player controls a postman on a mission to deliver mail in a small airborne village. To achieve this task, the player must master the use of their glider.
+Building on a game I mention further down, the player controls a postman on a mission to deliver mail in a small airborne village.
 
-A simple casual mobile game with a light meta progression.
+It's a simple casual mobile game with a light meta progression.
 
 Google Play Store page: [Postman Tap for Android](https://play.google.com/store/apps/details?id=com.game.glider.postman)
 
@@ -94,11 +89,31 @@ Your goal is to annex the most villages and levy the most taxes off of them.
 
 <img src="art/glider_boy_banner.jpg"/>
 
-A very modest infinite runner for mobile. My attempt at making an ultra casual mobile game.
+A very modest infinite runner for mobile. My first attempt at making an ultra casual mobile game and first solo project.
 
 # Ludum Dare submissions
 
 I started regularly participating in the Ludum Dare competition: a global game jam where participants try to create a game in 3 days, the theme is picked by the community.
+
+### [LD 49: Lab Panic!](https://ldjam.com/events/ludum-dare/49/lab-panic)
+
+<img src="art/lab_panic.PNG"/>
+
+Imposed theme: Unstable
+
+Puzzle game where the player must survive the imminent explosion of a bunch of vat of goo.
+
+Ludum dare page: [Lab Panic!](https://ldjam.com/events/ludum-dare/49/lab-panic)
+
+### [LD 48: Asteroid Breaker](https://ldjam.com/events/ludum-dare/48/asteroid-breaker)
+
+<img src="art/asteroid_breaker.PNG"/>
+
+Imposed theme: Deeper and deeper
+
+The player controls a drill and must reach the core of the asteroid without being destroyed.
+
+Ludum dare page: [Asteroid Breaker](https://ldjam.com/events/ludum-dare/48/asteroid-breaker)
 
 ### [LD 47: Once More](https://ldjam.com/events/ludum-dare/47/once-more-dear-friends)
 
@@ -142,19 +157,13 @@ Ludum dare page: [In the Beginning](https://ldjam.com/events/ludum-dare/45/in-th
 
 # Playable prototypes
 
-Fully playable self-contained prototypes, usually just missing art and UI/UX polish.
+Fully playable prototypes, usually missing art and too rough to be worth bringing to completion.
 
-### [Minute Miner](https://gibss.github.io/test/minute-miner/v0.2/index.html)
+### [Vertical scape](https://gibss.github.io/test/vertical-scape/v0.4)
 
-<img src="art/minute_miner_banner.jpg"/>
+<img src="art/vertical_scape_banner.jpg"/>
 
-The player must last 20 minutes by harvesting minerals and buying defenses in an ever growing mine. 
-
-### [Horizon Army](https://gibss.github.io/test/landmark-project/v0.5/index.html)
-
-<img src="art/horizon_army_banner.jpg"/>
-
-Digital card game of sorts where the player collects medieval fantasy soldiers. With those soldiers they try to create the most optimal army to compete online against other players' armies. It is almost finished, the main missing piece as you can see is the art. Although it is hard to make out, it is fully playable and there is a short tutorial to onboard the player on how to make armies.
+A mix between a terraria like game and a colony management game. It's very light on content and mostly showcases a very simple core loop.
 
 ### [Goo ship](https://gibss.github.io/test/goo-ship/Prototype)
 
@@ -164,23 +173,23 @@ FTL meets worms: The player controls a ship in a 2D-platformer environment and u
 
 Make sure to play in fullscreen mode.
 
-### [Grapple](https://gibss.github.io/test/grapple-world/index.html)
-
-<img src="art/grapple_banner.jpg"/>
-
-A prototype for the first level of a super meat boy, celeste, vvvvv like 2d platformer. The player moves through space using a grappling hook.
-
-### [Vertical scape](https://gibss.github.io/test/vertical-scape/v0.4)
-
-<img src="art/vertical_scape_banner.jpg"/>
-
-A mix between a terraria like game and a colony management game. It's very light on content and mostly showcases a very simple core loop.
-
 ### [Cannon automaton](https://gibss.github.io/test/cannon-automaton-2)
 
 <img src="test/cannon-automaton-2/Images/cannon-automaton-III.PNG"/>
 
 Harvest resources to be able to purchase defenses and protect yourself from incoming waves of enemies. There is no tutorial so this might be a bit rough to learn but the jist of it is: place mining lasers to harvest resources, spend those resources to place more miners or more defenses. The enemies come from the right hand side of the screen.
+
+### [Horizon Army](https://gibss.github.io/test/landmark-project/v0.5/index.html)
+
+Digital card game of sorts where the player collects medieval fantasy soldiers. With those soldiers they try to create the most optimal army to compete online against other players' armies. It is almost finished, the main missing piece as you can see is the art. Although it is hard to make out, it is fully playable and there is a short tutorial to onboard the player on how to make armies.
+
+### [Minute Miner](https://gibss.github.io/test/minute-miner/v0.2/index.html)
+
+The player must last 20 minutes by harvesting minerals and buying defenses in an ever growing mine. 
+
+### [Grapple](https://gibss.github.io/test/grapple-world/index.html)
+
+A prototype for the first level of a super meat boy, celeste, vvvvv like 2d platformer. The player moves through space using a grappling hook.
 
 ### [Arrows](https://gibss.github.io/test/arrows/index.html)
 
