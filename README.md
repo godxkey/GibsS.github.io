@@ -107,7 +107,7 @@ Ludum dare page: [Lab Panic!](https://ldjam.com/events/ludum-dare/49/lab-panic)
 
 ### [LD 48: Asteroid Breaker](https://ldjam.com/events/ludum-dare/48/asteroid-breaker)
 
-<img src="art/asteroid_breaker_banner.PNG"/>
+<img src="art/asteroid_breaker_banner.png"/>
 
 Imposed theme: Deeper and deeper
 
